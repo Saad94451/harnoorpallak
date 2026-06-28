@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Hero Section • Zigzag Divider</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Space Grotesk', 'Inter', system_ui, sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.04em;
+        }
+
+        .zigzag-container {
+            filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));
+        }
+
+        .hero-grid {
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 80px 80px;
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white overflow-x-hidden">
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center relative hero-grid">
+        <div class="max-w-screen-2xl mx-auto w-full px-6 md:px-10">
+            <div class="flex flex-col md:flex-row items-center relative">
+                
+                <!-- LEFT: TEXT COLUMN (col-6 style) -->
+                <div class="w-full md:w-1/2 flex flex-col justify-center py-16 md:py-20 lg:py-24 pr-0 md:pr-8 lg:pr-12">
+                    <div class="max-w-xl">
+                        <!-- Badge -->
+                        <div class="inline-flex items-center gap-x-2.5 px-5 py-2 rounded-3xl bg-white/5 border border-white/10 mb-8">
+                            <div class="flex items-center gap-x-1.5">
+                                <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                                <span class="text-emerald-400 text-sm font-medium tracking-wider">2026 EDITION</span>
+                            </div>
+                            <span class="text-xs text-white/40">•</span>
+                            <span class="text-white/70 text-sm">Now with AI Studio</span>
+                        </div>
+
+                        <!-- Heading -->
+                        <h1 class="heading-font text-6xl md:text-7xl lg:text-7xl xl:text-8xl leading-[0.92] tracking-[-0.05em] font-semibold mb-6">
+                            Design.<br>
+                            <span class="bg-gradient-to-r from-white via-white to-white/70 bg-clip-text text-transparent">Launch.</span><br>
+                            Scale.
+                        </h1>
+
+                        <!-- Subtext -->
+                        <p class="max-w-md text-xl md:text-2xl text-white/70 leading-tight mb-9">
+                            The most powerful platform to build beautiful digital products that people love.
+                        </p>
+
+                        <!-- CTA Buttons -->
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button onclick="window.location.href='#get-started'"
+                                    class="group px-9 py-4 bg-white hover:bg-white active:scale-[0.985] transition-all text-zinc-950 font-semibold text-lg rounded-3xl flex items-center justify-center gap-x-3 shadow-xl shadow-white/20">
+                                <span>Get started for free</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-hover:translate-x-0.5 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" d="M14 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                            
+                            <button onclick="alert('Demo video would play here! (This is a demo)')"
+                                    class="group px-8 py-4 border border-white/25 hover:bg-white/5 active:bg-white/10 transition-all font-medium text-lg rounded-3xl flex items-center justify-center gap-x-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 4.01V8" />
+                                </svg>
+                                <span>Watch demo</span>
+                            </button>
+                        </div>
+
+                        <!-- Trust row -->
+                        <div class="mt-10 flex items-center gap-x-6 text-sm">
+                            <div class="flex -space-x-3">
+                                <div class="w-7 h-7 rounded-full bg-zinc-700 border border-zinc-600 overflow-hidden ring-1 ring-white/10"><img src="https://i.pravatar.cc/28?img=28" class="w-full h-full object-cover"></div>
+                                <div class="w-7 h-7 rounded-full bg-zinc-700 border border-zinc-600 overflow-hidden ring-1 ring-white/10"><img src="https://i.pravatar.cc/28?img=47" class="w-full h-full object-cover"></div>
+                                <div class="w-7 h-7 rounded-full bg-zinc-700 border border-zinc-600 overflow-hidden ring-1 ring-white/10"><img src="https://i.pravatar.cc/28?img=12" class="w-full h-full object-cover"></div>
+                            </div>
+                            <div class="text-white/60 text-sm">
+                                <span class="font-semibold text-white">12,480+</span> founders building with us
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT: IMAGE COLUMN (col-6 style) -->
+                <div class="w-full md:w-1/2 relative h-[520px] md:h-[620px] lg:h-[680px] mt-8 md:mt-0">
+                    <div class="absolute inset-0 overflow-hidden md:rounded-l-[3.5rem] shadow-2xl shadow-black/70 ring-1 ring-white/10">
+                        <img src="https://picsum.photos/id/1016/1400/900" 
+                             alt="Stunning modern workspace with creative team collaborating on digital design"
+                             class="w-full h-full object-cover scale-[1.02]">
+                        
+                        <!-- Subtle left gradient for better blending with divider -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-zinc-950/70 via-zinc-950/20 to-transparent"></div>
+                    </div>
+                    
+                    <!-- Small floating badge on image -->
+                    <div class="absolute top-8 right-8 bg-white/95 text-zinc-950 px-4 py-1.5 rounded-2xl shadow-xl flex items-center gap-x-2 text-sm font-medium">
+                        <div class="w-2 h-2 bg-emerald-500 rounded-full"></div>
+                        <span>Featured in Product Hunt</span>
+                    </div>
+                </div>
+
+                <!-- WHITE ZIGZAG LINES DIVIDER (attached in the middle - like zebra but zigzag) -->
+                <div class="hidden md:flex absolute left-1/2 top-8 bottom-8 -translate-x-1/2 w-[52px] z-30 items-center justify-center pointer-events-none">
+                    <div class="zigzag-container h-full w-full relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" 
+                             width="100%" height="100%" 
+                             viewBox="0 0 56 600" 
+                             preserveAspectRatio="none"
+                             class="h-full w-full">
+                            
+                            <!-- Zigzag Line 1 -->
+                            <polyline 
+                                points="9,0 21,20 9,40 21,60 9,80 21,100 9,120 21,140 9,160 21,180 9,200 21,220 9,240 21,260 9,280 21,300 9,320 21,340 9,360 21,380 9,400 21,420 9,440 21,460 9,480 21,500 9,520 21,540 9,560 21,580 9,600" 
+                                fill="none" 
+                                stroke="#ffffff" 
+                                stroke-width="2.25" 
+                                stroke-linecap="round" 
+                                stroke-linejoin="round" 
+                                opacity="0.95"/>
+                            
+                            <!-- Zigzag Line 2 -->
+                            <polyline 
+                                points="16,0 28,20 16,40 28,60 16,80 28,100 16,120 28,140 16,160 28,180 16,200 28,220 16,240 28,260 16,280 28,300 16,320 28,340 16,360 28,380 16,400 28,420 16,440 28,460 16,480 28,500 16,520 28,540 16,560 28,580 16,600" 
+                                fill="none" 
+                                stroke="#ffffff" 
+                                stroke-width="1.85" 
+                                stroke-linecap="round" 
+                                stroke-linejoin="round" 
+                                opacity="0.75"/>
+                            
+                            <!-- Zigzag Line 3 -->
+                            <polyline 
+                                points="23,0 35,20 23,40 35,60 23,80 35,100 23,120 35,140 23,160 35,180 23,200 35,220 23,240 35,260 23,280 35,300 23,320 35,340 23,360 35,380 23,400 35,420 23,440 35,460 23,480 35,500 23,520 35,540 23,560 35,580 23,600" 
+                                fill="none" 
+                                stroke="#ffffff" 
+                                stroke-width="2.5" 
+                                stroke-linecap="round" 
+                                stroke-linejoin="round" 
+                                opacity="0.9"/>
+                            
+                            <!-- Zigzag Line 4 -->
+                            <polyline 
+                                points="30,0 42,20 30,40 42,60 30,80 42,100 30,120 42,140 30,160 42,180 30,200 42,220 30,240 42,260 30,280 42,300 30,320 42,340 30,360 42,380 30,400 42,420 30,440 42,460 30,480 42,500 30,520 42,540 30,560 42,580 30,600" 
+                                fill="none" 
+                                stroke="#ffffff" 
+                                stroke-width="1.6" 
+                                stroke-linecap="round" 
+                                stroke-linejoin="round" 
+                                opacity="0.8"/>
+                            
+                            <!-- Zigzag Line 5 (rightmost) -->
+                            <polyline 
+                                points="37,0 49,20 37,40 49,60 37,80 49,100 37,120 49,140 37,160 49,180 37,200 49,220 37,240 49,260 37,280 49,300 37,320 49,340 37,360 49,380 37,400 49,420 37,440 49,460 37,480 49,500 37,520 49,540 37,560 49,580 37,600" 
+                                fill="none" 
+                                stroke="#ffffff" 
+                                stroke-width="2.1" 
+                                stroke-linecap="round" 
+                                stroke-linejoin="round" 
+                                opacity="0.85"/>
+                        </svg>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Tailwind script (optional config)
+        function initializeTailwind() {
+            document.documentElement.style.setProperty('--accent', '#6366f1');
+        }
+        
+        window.onload = function() {
+            initializeTailwind();
+            
+            // Bonus: subtle animation on zigzag lines (optional)
+            const svg = document.querySelector('svg');
+            if (svg) {
+                svg.style.transition = 'filter 0.4s ease';
+                setTimeout(() => {
+                    svg.style.filter = 'drop-shadow(0 0 12px rgba(255,255,255,0.25))';
+                }, 1200);
+            }
+        }
+        
+        // Keyboard hint (for fun)
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "?" && document.activeElement.tagName === "BODY") {
+                const divider = document.querySelector('.zigzag-container');
+                if (divider) {
+                    divider.style.transitionDuration = '80ms';
+                    divider.style.transform = 'translateX(4px)';
+                    setTimeout(() => {
+                        divider.style.transform = 'translateX(0)';
+                    }, 180);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
