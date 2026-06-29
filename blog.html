@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Blog - Harnoor Pallak Construction</title>
+    <meta name="description" content="Expert insights, construction tips, project stories and industry trends from Harnoor Pallak Construction.">
+    <meta name="keywords" content="construction blog, calgary construction, luxury homes, renovation tips, sustainable building">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- Premium VIP Blog Styles -->
+    <style>
+         :root {
+            --hp-terracotta: #77301a;
+            --hp-gold: #9a721d;
+            --hp-white: #ffffff;
+        }
+        
+        .blog-filter .btn-filter {
+            border: 2px solid var(--hp-terracotta);
+            color: var(--hp-terracotta);
+            background: transparent;
+            font-weight: 600;
+            padding: 10px 26px;
+            margin: 6px 4px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            font-size: 0.92rem;
+        }
+        
+        .blog-filter .btn-filter.active,
+        .blog-filter .btn-filter:hover {
+            background: var(--hp-terracotta);
+            color: white;
+            border-color: var(--hp-terracotta);
+            box-shadow: 0 4px 15px rgba(119, 48, 26, 0.3);
+        }
+        
+        .blog-card {
+            border: 1px solid #f0f0f0;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            background: white;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 55px rgba(119, 48, 26, 0.18);
+            border-color: var(--hp-gold);
+        }
+        
+        .blog-card .card-img-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .blog-card img {
+            height: 220px;
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        
+        .blog-card:hover img {
+            transform: scale(1.08);
+        }
+        
+        .blog-category-badge {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: var(--hp-terracotta);
+            color: white;
+            padding: 5px 14px;
+            border-radius: 25px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .blog-card .card-body {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .blog-card .meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 0.85rem;
+            color: #777;
+        }
+        
+        .blog-card .meta .date {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .blog-card h4 {
+            color: #222;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 12px;
+            flex: 1;
+        }
+        
+        .blog-card .excerpt {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.2rem;
+        }
+        
+        .blog-card .author {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: auto;
+            padding-top: 12px;
+            border-top: 1px solid #f0f0f0;
+        }
+        
+        .blog-card .author img {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #eee;
+        }
+        
+        .blog-card .author-info {
+            font-size: 0.85rem;
+        }
+        
+        .blog-card .author-info strong {
+            color: #333;
+            font-weight: 600;
+        }
+        
+        .blog-card .btn-read {
+            background: var(--hp-gold);
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            align-self: flex-start;
+            margin-top: 8px;
+        }
+        
+        .blog-card .btn-read:hover {
+            background: var(--hp-terracotta);
+            transform: translateX(5px);
+        }
+        
+        .featured-blog {
+            background: linear-gradient(135deg, #f8f5f2 0%, #fff 100%);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        }
+        
+        .featured-blog:hover {
+            box-shadow: 0 25px 60px rgba(119, 48, 26, 0.15);
+        }
+    </style>
+</head>
+
+<body class="blog-page">
+
+    <!-- HEADER (EXACT SAME) -->
+    <header id="header" class="header fixed-top">
+        <div class="topbar d-flex align-items-center dark-background">
+            <div class="container d-flex justify-content-center justify-content-md-between">
+                <div class="contact-info d-flex align-items-center">
+                    <i class="bi bi-envelope d-flex align-items-center"><a
+              href="mailto:Info@harnoorpallakconstruction.ca">Info@harnoorpallakconstruction.ca</a></i>
+                    <i class="bi bi-phone d-flex align-items-center ms-4"><span>403-667-1409</span></i>
+                </div>
+                <div class="social-links d-none d-md-flex align-items-center">
+                    <a href="#!" class="twitter"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#!" class="facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#!" class="instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#!" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="branding d-flex align-items-center">
+            <div class="container position-relative d-flex align-items-center justify-content-between">
+                <a href="index.html" class="logo d-flex align-items-center">
+                    <img src="assets/img/logoremove.png" alt="Harnoor Pallak Logo" style="max-height: 150px; width: 200px;">
+                </a>
+
+                <nav id="navmenu" class="navmenu">
+
+                    <ul>
+
+                        <li><a href="index.html">Home</a></li>
+
+                        <li class="dropdown"><a href="about.html"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+
+                            <ul>
+
+                                <li><a href="about.html#members">Members</a></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li><a href="services.html">Services</a></li>
+
+                        <li><a href="portfolio.html">Portfolio</a></li>
+
+                        <li><a href="blog.html" class="active">Blog</a></li>
+
+                        <li><a href="contact.html">Contact</a></li>
+
+                        <li><a href="appointment.html" class="btn-quote">Get A Quote</a></li>
+
+                    </ul>
+
+                    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- END HEADER -->
+
+    <main class="main">
+
+        <!-- Page Title -->
+        <div class="page-title">
+            <div class="heading">
+                <div class="container">
+                    <div class="row d-flex justify-content-center text-center">
+                        <div class="col-lg-8">
+                            <h1 class="heading-title">Our Blog</h1>
+                            <p class="mb-0">
+                                Expert insights, project stories, construction tips, and inspiration from the team at Harnoor Pallak Construction. Building knowledge, one article at a time.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="breadcrumbs">
+                <div class="container">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="current">Blog</li>
+                    </ol>
+                </div>
+            </nav>
+        </div>
+
+        <!-- ==================== FEATURED ARTICLE ==================== -->
+        <section class="section pt-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="featured-blog row g-0 align-items-center" data-aos="fade-up">
+                            <div class="col-lg-6">
+                                <div class="p-4 p-lg-5">
+                                    <div class="d-flex align-items-center gap-2 mb-3">
+                                        <span class="badge" style="background: var(--hp-terracotta); color: white; padding: 6px 14px; border-radius: 20px; font-size: 0.75rem;">FEATURED</span>
+                                        <span class="text-muted small">June 22, 2026</span>
+                                    </div>
+                                    <h2 class="fw-bold mb-3" style="color: #222; line-height: 1.2;">Why 2026 is the Year of Sustainable Luxury Homes in Calgary</h2>
+                                    <p class="text-muted mb-4">Discover how eco-friendly materials, smart technology, and timeless design are redefining luxury living in Alberta this year.</p>
+
+                                    <div class="d-flex align-items-center gap-3 mb-4">
+                                        <img src="https://picsum.photos/id/1005/40/40" alt="Harnoor Pallak" class="rounded-circle" style="width:42px; height:42px; border: 2px solid #eee;">
+                                        <div>
+                                            <strong style="color:#333;">Harnoor Pallak</strong><br>
+                                            <small class="text-muted">Founder &amp; Principal Builder</small>
+                                        </div>
+                                    </div>
+
+                                    <a href="#" class="btn px-4 py-2" style="background: var(--hp-gold); color: white; border-radius: 50px; font-weight: 600;">
+                    Read Full Article <i class="bi bi-arrow-right ms-2"></i>
+                  </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <img src="https://picsum.photos/id/1018/900/600" alt="Sustainable Luxury Home" class="img-fluid w-100" style="height: 420px; object-fit: cover;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== BLOG GRID WITH FILTERS ==================== -->
+        <section class="section pt-0">
+            <div class="container">
+
+                <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between mb-4">
+                    <div>
+                        <h3 class="mb-1" style="color: var(--hp-terracotta); font-weight: 700;">Latest Articles</h3>
+                        <p class="text-muted mb-0">Stay updated with our latest projects and expert advice</p>
+                    </div>
+
+                    <!-- Search Bar -->
+                    <div class="mt-3 mt-md-0" style="max-width: 280px;">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search articles..." id="blog-search">
+                            <button class="btn" style="background: var(--hp-terracotta); color: white;" type="button">
+                <i class="bi bi-search"></i>
+              </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category Filters -->
+                <div class="blog-filter text-center mb-5">
+                    <button class="btn btn-filter active" data-filter="all">All</button>
+                    <button class="btn btn-filter" data-filter="residential">Residential</button>
+                    <button class="btn btn-filter" data-filter="commercial">Commercial</button>
+                    <button class="btn btn-filter" data-filter="renovation">Renovation</button>
+                    <button class="btn btn-filter" data-filter="sustainability">Sustainability</button>
+                    <button class="btn btn-filter" data-filter="tips">Tips &amp; Guides</button>
+                </div>
+
+                <div class="row g-4" id="blog-grid">
+
+                    <!-- Blog Card 1 -->
+                    <div class="col-lg-4 col-md-6 blog-item" data-category="residential">
+                        <div class="blog-card">
+                            <div class="card-img-wrapper">
+                                <img src="https://picsum.photos/id/1018/600/400" alt="Luxury Home Design Trends">
+                                <div class="blog-category-badge">Residential</div>
+                            </div>
+                            <div class="card-body">
+                                <div class="meta">
+                                    <span class="date"><i class="bi bi-calendar3"></i> June 18, 2026</span>
+                                    <span><i class="bi bi-clock"></i> 8 min read</span>
+                                </div>
+                                <h4>5 Timeless Design Trends for Luxury Homes in 2026</h4>
+                                <p class="excerpt">From natural stone to warm neutrals — the design elements that will never go out of style in Calgary homes.</p>
+
+                                <div class="author">
+                                    <img src="https://picsum.photos/id/1005/36/36" alt="Sarah Khan">
+                                    <div class="author-info">
+                                        <strong>Sarah Khan</strong><br>
+                                        <small>Design Lead</small>
+                                    </div>
+                                </div>
+
+                                <a href="#" class="btn btn-read mt-auto">Read Article</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Card 2 -->
+                    <div class="col-lg-4 col-md-6 blog-item" data-category="sustainability">
+                        <div class="blog-card">
+                            <div class="card-img-wrapper">
+                                <img src="https://picsum.photos/id/160/600/400" alt="Sustainable Construction">
+                                <div class="blog-category-badge">Sustainability</div>
+                            </div>
+                            <div class="card-body">
+                                <div class="meta">
+                                    <span class="date"><i class="bi bi-calendar3"></i> June 12, 2026</span>
+                                    <span><i class="bi bi-clock"></i> 6 min read</span>
+                                </div>
+                                <h4>How Sustainable Building Saves You Money Long Term</h4>
+                                <p class="excerpt">Smart investments in energy-efficient materials and systems that pay for themselves in just a few years.</p>
+
+                                <div class="author">
+                                    <img src="https://picsum.photos/id/1005/36/36" alt="Harnoor Pallak">
+                                    <div class="author-info">
+                                        <strong>Harnoor Pallak</strong><br>
+                                        <small>Founder</small>
+                                    </div>
+                                </div>
+
+                                <a href="#" class="btn btn-read mt-auto">Read Article</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Card 3 -->
+                    <div class="col-lg-4 col-md-6 blog-item" data-category="renovation">
+                        <div class="blog-card">
+                            <div class="card-img-wrapper">
+                                <img src="https://picsum.photos/id/251/600/400" alt="Heritage Renovation">
+                                <div class="blog-category-badge">Renovation</div>
+                            </div>
+                            <div class="card-body">
+                                <div class="meta">
+                                    <span class="date"><i class="bi bi-calendar3"></i> June 5, 2026</span>
+                                    <span><i class="bi bi-clock"></i> 10 min read</span>
+                                </div>
+                                <h4>The Art of Heritage Home Restoration in Alberta</h4>
+                                <p class="excerpt">How we balance preserving historic charm with modern comfort in Calgary’s oldest neighborhoods.</p>
+
+                                <div class="author">
+                                    <img src="https://picsum.photos/id/1005/36/36" alt="Michael Torres">
+                                    <div class="author-info">
+                                        <strong>Michael Torres</strong><br>
+                                        <small>Restoration Specialist</small>
+                                    </div>
+                                </div>
+
+                                <a href="#" class="btn btn-read mt-auto">Read Article</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Card 4 -->
+                    <div class="col-lg-4 col-md-6 blog-item" data-category="commercial">
+                        <div class="blog-card">
+                            <div class="card-img-wrapper">
+                                <img src="https://picsum.photos/id/29/600/400" alt="Commercial Construction">
+                                <div class="blog-category-badge">Commercial</div>
+                            </div>
+                            <div class="card-body">
+                                <div class="meta">
+                                    <span class="date"><i class="bi bi-calendar3"></i> May 28, 2026</span>
+                                    <span><i class="bi bi-clock"></i> 7 min read</span>
+                                </div>
+                                <h4>What Every Business Owner Should Know Before Starting Construction</h4>
+                                <p class="excerpt">Key considerations, timelines, and cost-saving strategies for commercial projects in Calgary.</p>
+
+                                <div class="author">
+                                    <img src="https://picsum.photos/id/1005/36/36" alt="Harnoor Pallak">
+                                    <div class="author-info">
+                                        <strong>Harnoor Pallak</strong><br>
+                                        <small>Founder</small>
+                                    </div>
+                                </div>
+
+                                <a href="#" class="btn btn-read mt-auto">Read Article</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Card 5 -->
+                    <div class="col-lg-4 col-md-6 blog-item" data-category="tips">
+                        <div class="blog-card">
+                            <div class="card-img-wrapper">
+                                <img src="https://picsum.photos/id/201/600/400" alt="Masonry Tips">
+                                <div class="blog-category-badge">Tips &amp; Guides</div>
+                            </div>
+                            <div class="card-body">
+                                <div class="meta">
+                                    <span class="date"><i class="bi bi-calendar3"></i> May 20, 2026</span>
+                                    <span><i class="bi bi-clock"></i> 5 min read</span>
+                                </div>
+                                <h4>Choosing the Right Masonry Contractor: 7 Questions to Ask</h4>
+                                <p class="excerpt">Protect your investment with these essential questions before hiring a masonry team.</p>
+
+                                <div class="author">
+                                    <img src="https://picsum.photos/id/1005/36/36" alt="David Chen">
+                                    <div class="author-info">
+                                        <strong>David Chen</strong><br>
+                                        <small>Project Manager</small>
+                                    </div>
+                                </div>
+
+                                <a href="#" class="btn btn-read mt-auto">Read Article</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Card 6 -->
+                    <div class="col-lg-4 col-md-6 blog-item" data-category="residential">
+                        <div class="blog-card">
+                            <div class="card-img-wrapper">
+                                <img src="https://picsum.photos/id/1005/600/400" alt="Interior Finishing">
+                                <div class="blog-category-badge">Residential</div>
+                            </div>
+                            <div class="card-body">
+                                <div class="meta">
+                                    <span class="date"><i class="bi bi-calendar3"></i> May 14, 2026</span>
+                                    <span><i class="bi bi-clock"></i> 9 min read</span>
+                                </div>
+                                <h4>Interior Finishing on a Budget: Luxury Looks Without the Price Tag</h4>
+                                <p class="excerpt">Smart choices in materials and finishes that deliver high-end results at a fraction of the cost.</p>
+
+                                <div class="author">
+                                    <img src="https://picsum.photos/id/1005/36/36" alt="Aisha Patel">
+                                    <div class="author-info">
+                                        <strong>Aisha Patel</strong><br>
+                                        <small>Interior Designer</small>
+                                    </div>
+                                </div>
+
+                                <a href="#" class="btn btn-read mt-auto">Read Article</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer" class="hp-footer mt-5">
+
+
+
+
+
+        <div class="hp-footer__contact-row mt-5">
+            <div class="container">
+                <div class="row g-3">
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <div class="hp-footer__contact-card">
+                            <div class="hp-footer__contact-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                            <div class="hp-footer__contact-body">
+                                <span class="hp-footer__contact-label">Location</span>
+                                <span class="hp-footer__contact-value">Calgary, Alberta, Canada</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <div class="hp-footer__contact-card">
+                            <div class="hp-footer__contact-icon"><i class="bi bi-telephone-fill"></i></div>
+                            <div class="hp-footer__contact-body">
+                                <span class="hp-footer__contact-label">Call Us</span>
+                                <a href="tel:4036671409" class="hp-footer__contact-value">403-667-1409</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12">
+                        <div class="hp-footer__contact-card">
+                            <div class="hp-footer__contact-icon"><i class="bi bi-envelope-fill"></i></div>
+                            <div class="hp-footer__contact-body">
+                                <span class="hp-footer__contact-label">Email</span>
+                                <a href="mailto:Info@harnoorpallakconstruction.ca" class="hp-footer__contact-value">Info@harnoorpallakconstruction.ca</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hp-footer__main">
+            <div class="container">
+                <div class="row g-5 align-items-start">
+
+                    <div class="col-lg-4 col-md-6">
+                        <a href="index.html">
+                            <img src="assets/img/logoremove.png" alt="Harnoor Pallak Construction" class="hp-footer__brand-logo">
+                        </a>
+                        <p class="hp-footer__brand-text">Building exceptional structures through quality craftsmanship, innovative solutions, and reliable service that exceeds client expectations.</p>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 col-6">
+                        <h6 class="hp-footer__heading">Quick Links</h6>
+                        <ul class="hp-footer__links">
+                            <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
+                            <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
+                            <li><a href="services.html"><i class="bi bi-chevron-right"></i> Our Services</a></li>
+                            <li><a href="departments.html"><i class="bi bi-chevron-right"></i> Portfolio</a></li>
+                            <li><a href="doctors.html"><i class="bi bi-chevron-right"></i> Our Team</a></li>
+                            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 col-6">
+                        <h6 class="hp-footer__heading">Our Services</h6>
+                        <ul class="hp-footer__links">
+                            <li><a href="services.html"><i class="bi bi-chevron-right"></i> Commercial Building</a></li>
+                            <li><a href="services.html"><i class="bi bi-chevron-right"></i> Residential Homes</a></li>
+                            <li><a href="services.html"><i class="bi bi-chevron-right"></i> Renovations</a></li>
+                            <li><a href="services.html"><i class="bi bi-chevron-right"></i> Masonry Work</a></li>
+                            <li><a href="services.html"><i class="bi bi-chevron-right"></i> Interior Finishing</a></li>
+                            <li><a href="services.html"><i class="bi bi-chevron-right"></i> Electrical &amp; Plumbing</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <h6 class="hp-footer__heading">Stay Updated</h6>
+                        <p class="hp-footer__newsletter-text">Subscribe for project showcases, construction tips, and exclusive updates from Harnoor Pallak Construction.</p>
+                        <form class="hp-footer__form" id="footer-newsletter-form">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit" id="btn-subscribe">
+                <span>Subscribe</span>
+                <i class="bi bi-send-fill"></i>
+              </button>
+                            <div class="form-message mt-2 w-100" id="subscribe-message" style="display: none;"></div>
+                        </form>
+                        <div class="hp-footer__social">
+                            <span class="hp-footer__social-label">Follow Us</span>
+                            <div class="hp-footer__social-list">
+                                <a href="#!" class="hp-footer__social-link" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                                <a href="#!" class="hp-footer__social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                                <a href="#!" class="hp-footer__social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                                <a href="#!" class="hp-footer__social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="hp-footer__bottom">
+            <div class="container">
+                <div class="row align-items-center g-3">
+                    <div class="col-lg-6 text-center text-lg-start">
+                        <p>&copy; <span>2026</span> <strong>Harnoor Pallak Construction</strong>. All rights reserved.</p>
+                    </div>
+                    <div class="col-lg-6 text-center text-lg-end">
+                        <div class="hp-footer__legal">
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Terms of Service</a>
+                            <a href="contact.html">Support</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#!" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- Blog Filter + Search Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.btn-filter');
+            const blogItems = document.querySelectorAll('.blog-item');
+            const searchInput = document.getElementById('blog-search');
+
+            // Filter by category
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    const filterValue = this.getAttribute('data-filter');
+
+                    blogItems.forEach(item => {
+                        const category = item.getAttribute('data-category');
+                        if (filterValue === 'all' || category === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Simple search functionality
+            searchInput.addEventListener('keyup', function() {
+                const searchTerm = this.value.toLowerCase().trim();
+
+                blogItems.forEach(item => {
+                    const title = item.querySelector('h4').textContent.toLowerCase();
+                    const excerpt = item.querySelector('.excerpt').textContent.toLowerCase();
+
+                    if (title.includes(searchTerm) || excerpt.includes(searchTerm)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

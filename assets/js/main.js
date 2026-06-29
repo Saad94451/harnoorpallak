@@ -39,13 +39,19 @@
   /**
    * Hide mobile nav on same-page/hash links
    */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
+  // Removed auto-close behavior to prevent shrink effect on external page links
+
+  /**
+   * Prevent mobile menu from closing when btn-quote is clicked
+   */
+  document.querySelectorAll('.navmenu .btn-quote').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      // If mobile menu is active, prevent default and navigate immediately
       if (document.querySelector('.mobile-nav-active')) {
-        mobileNavToogle();
+        e.preventDefault();
+        window.location.href = this.getAttribute('href');
       }
     });
-
   });
 
   /**

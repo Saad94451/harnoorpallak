@@ -229,9 +229,24 @@ h6 {
   width: auto;
 }
 
+/* Reduce navbar height and logo size for non-index pages */
+body:not(.index-page) .header .branding {
+  min-height: 50px;
+  padding: 8px 0;
+}
+
+body:not(.index-page) .header .logo img {
+  max-height: 45px !important;
+  width: auto !important;
+}
+
 @media (max-width: 767px) {
   .header .logo img.site-logo {
     max-height: 55px;
+  }
+
+  body:not(.index-page) .header .logo img {
+    max-height: 40px !important;
   }
 
   .index-page .header .branding .container {
@@ -498,6 +513,10 @@ h6 {
     position: relative;
   }
 
+  .navmenu .btn-quote {
+    transition: none !important;
+  }
+
   .navmenu a i,
   .navmenu a:focus i {
     font-size: 12px;
@@ -538,14 +557,22 @@ h6 {
     padding: 10px 24px;
     border-radius: 8px;
     font-weight: 600;
-    transition: all 0.3s ease;
+    transition: none !important;
     box-shadow: 0 4px 15px rgba(204, 78, 92, 0.3);
+    transform: none !important;
   }
 
   .navmenu .btn-quote:hover {
     background: color-mix(in srgb, var(--accent-color), black 15%);
-    transform: translateY(-2px);
+    transform: translateY(-2px) !important;
     box-shadow: 0 6px 20px rgba(204, 78, 92, 0.4);
+  }
+
+  .navmenu .btn-quote:active,
+  .navmenu .btn-quote:focus,
+  .navmenu .btn-quote:visited {
+    transform: none !important;
+    background: var(--accent-color) !important;
   }
 
   .navmenu .btn-quote:before {
@@ -760,6 +787,10 @@ h6 {
     transform: translateX(0);
     visibility: visible;
     pointer-events: auto;
+  }
+
+  .mobile-nav-active .navmenu .btn-quote {
+    transform: none !important;
   }
 }
 
@@ -1163,12 +1194,21 @@ h6 {
 }
 
 .page-title .heading {
-  padding: 80px 0;
+  padding: 40px 0;
 }
 
 .page-title .heading h1 {
   font-size: 38px;
   font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.page-title .heading p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--hp-text-muted);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .page-title nav {

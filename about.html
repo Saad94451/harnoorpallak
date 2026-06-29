@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>About - Clinic Bootstrap Template</title>
+  <title>About - Harnoor Pallak Construction</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -37,9 +37,331 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+  <!-- INTERNAL VIP STYLES - Construction Theme -->
+  <style>
+    :root {
+      --hp-terracotta: #77301a;
+      --hp-gold: #9a721d;
+      --hp-gold-soft: #f5edd8;
+    }
+
+    /* Page Title Enhancements */
+    .page-title .heading-title {
+      color: var(--hp-terracotta);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .page-title p {
+      color: #444;
+      font-size: 1.05rem;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* About Section - VIP Construction Style */
+    .about-content h2 {
+      color: var(--hp-terracotta);
+      font-weight: 800;
+      font-size: 2.35rem;
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+
+    .about-content .lead {
+      color: #333;
+      font-size: 1.2rem;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    .about-content p {
+      color: #555;
+      font-size: 1.02rem;
+      line-height: 1.75;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .stat-item {
+      background: var(--hp-gold-soft);
+      border-radius: 16px;
+      padding: 1.6rem 1.2rem;
+      text-align: center;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid transparent;
+    }
+
+    .stat-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(119, 48, 26, 0.12);
+      border-color: var(--hp-gold);
+    }
+
+    .stat-number {
+      font-size: 2.65rem;
+      font-weight: 800;
+      color: var(--hp-terracotta);
+      display: block;
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+
+    .stat-label {
+      color: #444;
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: block;
+    }
+
+    /* Values Section - Premium Cards */
+    .values-section h3 {
+      color: var(--hp-terracotta);
+      font-weight: 800;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .value-item {
+      background: #ffffff;
+      border: 1px solid var(--hp-gold-soft);
+      border-radius: 18px;
+      padding: 2.1rem 1.6rem;
+      height: 100%;
+      transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .value-item:hover {
+      border-color: var(--hp-gold);
+      box-shadow: 0 20px 45px rgba(154, 114, 29, 0.18);
+      transform: translateY(-10px);
+    }
+
+    .value-icon {
+      width: 72px;
+      height: 72px;
+      background: linear-gradient(135deg, var(--hp-terracotta), var(--hp-gold));
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.1rem;
+      margin: 0 auto 1.4rem;
+      box-shadow: 0 8px 20px rgba(119, 48, 26, 0.25);
+    }
+
+    .value-item h4 {
+      color: var(--hp-terracotta);
+      font-weight: 800;
+      margin-bottom: 0.85rem;
+      font-size: 1.35rem;
+    }
+
+    .value-item p {
+      color: #555;
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+
+    /* Certifications - Elegant Grid */
+    .certifications-section h3 {
+      color: var(--hp-terracotta);
+      font-weight: 800;
+    }
+
+    .certification-item {
+      background: #fff;
+      padding: 1.35rem;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+      transition: all 0.35s ease;
+      border: 1px solid var(--hp-gold-soft);
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .certification-item:hover {
+      transform: translateY(-6px) scale(1.02);
+      border-color: var(--hp-gold);
+      box-shadow: 0 15px 35px rgba(154, 114, 29, 0.15);
+    }
+
+    .certification-item img {
+      max-height: 70px;
+      width: auto;
+      filter: saturate(0.95);
+    }
+
+    /* ========== FULL VIP MEMBERS SECTION ========== */
+    .members.section {
+      background: #ffffff;
+      padding: 90px 0 100px;
+      position: relative;
+    }
+
+    .members .section-title {
+      font-size: 2.85rem;
+      font-weight: 800;
+      color: var(--hp-terracotta);
+      position: relative;
+      display: inline-block;
+      padding-bottom: 18px;
+      letter-spacing: -0.8px;
+    }
+
+    .members .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90px;
+      height: 4px;
+      background: linear-gradient(to right, var(--hp-terracotta), var(--hp-gold));
+      border-radius: 4px;
+    }
+
+    .members .section-subtitle {
+      color: #555;
+      font-size: 1.15rem;
+      max-width: 620px;
+      margin: 1.1rem auto 0;
+      line-height: 1.6;
+    }
+
+    .member-card {
+      background: #ffffff;
+      border-radius: 22px;
+      overflow: hidden;
+     box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid var(--hp-gold-soft);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .member-card:hover {
+      transform: translateY(-14px) scale(1.015);
+      box-shadow: 0 30px 70px rgba(119, 48, 26, 0.18);
+      border-color: var(--hp-gold);
+    }
+
+    .member-image {
+      position: relative;
+      overflow: hidden;
+      height: 265px;
+      background: #f8f1e3;
+    }
+
+    .member-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: none !important;
+    }
+
+    .member-card:hover .member-image img {
+      transform: scale(1.12);
+    }
+
+    .member-image::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 55%;
+      z-index: 1;
+    }
+
+    .member-info {
+      padding: 1.85rem 1.6rem 1.6rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .member-info h4 {
+      color: var(--hp-terracotta);
+      font-weight: 800;
+      margin-bottom: 0.25rem;
+      font-size: 1.38rem;
+      line-height: 1.2;
+    }
+
+    .member-info .role {
+      display: inline-block;
+      background: var(--hp-gold-soft);
+      color: var(--hp-gold);
+      font-weight: 800;
+      font-size: 0.82rem;
+      padding: 5px 16px;
+      border-radius: 50px;
+      margin-bottom: 1.05rem;
+      letter-spacing: 0.3px;
+    }
+
+    .member-info p {
+      color: #444;
+      font-size: 0.97rem;
+      line-height: 1.65;
+      margin-bottom: 1.1rem;
+      flex: 1;
+    }
+
+    .member-expertise {
+      font-size: 0.875rem;
+      color: #555;
+      font-style: italic;
+      border-top: 1px solid var(--hp-gold-soft);
+      padding-top: 1rem;
+      margin-top: auto;
+    }
+
+    .member-card .social-links {
+      display: flex;
+      gap: 12px;
+      margin-top: 1rem;
+    }
+
+    .member-card .social-links a {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--hp-gold-soft);
+      color: var(--hp-gold);
+      border-radius: 50%;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+
+    .member-card .social-links a:hover {
+      background: var(--hp-gold);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+  </style>
 </head>
 
-<body class="about-page">  <header id="header" class="header fixed-top">
+<body class="about-page">
+
+  <!-- HEADER (UNCHANGED) -->
+  <header id="header" class="header fixed-top">
 
     <div class="topbar d-flex align-items-center dark-background">
       <div class="container d-flex justify-content-center justify-content-md-between">
@@ -64,22 +386,37 @@
           <img src="assets/img/logoremove.png" alt="Harnoor Pallak Logo" style="max-height: 150px; width: 200px;">
         </a>
 
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li class="dropdown"><a href="about.html" class="active"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="doctors.html">Members</a></li>
-              </ul>
-            </li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="departments.html">Portfolio</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="appointment.html" class="btn-quote">Get A Quote</a></li>
-          </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
+                <nav id="navmenu" class="navmenu">
+
+                    <ul>
+
+                        <li><a href="index.html">Home</a></li>
+
+                        <li class="dropdown"><a href="about.html" class="active"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+
+                            <ul>
+
+                                <li><a href="about.html#members">Members</a></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li><a href="services.html">Services</a></li>
+
+                        <li><a href="portfolio.html">Portfolio</a></li>
+
+                        <li><a href="blog.html">Blog</a></li>
+
+                        <li><a href="contact.html">Contact</a></li>
+
+                        <li><a href="appointment.html" class="btn-quote">Get A Quote</a></li>
+
+                    </ul>
+
+                    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+
+                </nav>
 
       </div>
 
@@ -89,18 +426,17 @@
 
   <main class="main">
 
-    <!-- Page Title -->
+    <!-- Page Title (REDESIGNED - Construction Theme) -->
     <div class="page-title">
       <div class="heading">
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
-              <h1 class="heading-title">About</h1>
+              <h1 class="heading-title">About Us</h1>
               <p class="mb-0">
-                Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo
-                odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum
-                debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat
-                ipsum dolorem.
+                For over 25 years, Harnoor Pallak Construction has been crafting exceptional homes, 
+                commercial spaces, and landmark renovations across Calgary and Alberta. 
+                We build with precision, passion, and an unwavering commitment to excellence.
               </p>
             </div>
           </div>
@@ -116,7 +452,7 @@
       </nav>
     </div><!-- End Page Title -->
 
-    <!-- About Section -->
+    <!-- About Section (FULLY REDESIGNED - Construction VIP) -->
     <section id="about" class="about section">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -124,62 +460,59 @@
         <div class="row align-items-center">
           <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
             <div class="about-content">
-              <h2>Compassionate Care for Every Family</h2>
-              <p class="lead">For over two decades, we have been dedicated to providing exceptional healthcare services
-                to our community. Our commitment goes beyond medical treatment—we believe in building lasting
-                relationships with our patients and their families.</p>
+              <h2>Building Legacies.<br>One Masterpiece at a Time.</h2>
+              <p class="lead">Since 2001, Harnoor Pallak Construction has been Calgary’s most trusted name in premium residential and commercial building. We don’t just construct buildings — we create enduring spaces that reflect our clients’ vision and stand the test of time.</p>
 
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat.</p>
+              <p>From luxury custom homes in the foothills to sophisticated commercial developments downtown, every project we undertake is guided by meticulous craftsmanship, superior materials, and a deep respect for the architectural heritage of Alberta.</p>
 
               <div class="stats-grid">
                 <div class="stat-item">
-                  <span class="stat-number" data-purecounter-start="0" data-purecounter-end="15000"
-                    data-purecounter-duration="2">15000</span>
-                  <span class="stat-label">Patients Treated</span>
+                  <span class="stat-number" data-purecounter-start="0" data-purecounter-end="1250"
+                    data-purecounter-duration="2">1250</span>
+                  <span class="stat-label">Projects Delivered</span>
                 </div>
                 <div class="stat-item">
                   <span class="stat-number" data-purecounter-start="0" data-purecounter-end="25"
                     data-purecounter-duration="2">25</span>
-                  <span class="stat-label">Years Experience</span>
+                  <span class="stat-label">Years of Excellence</span>
                 </div>
                 <div class="stat-item">
-                  <span class="stat-number" data-purecounter-start="0" data-purecounter-end="50"
-                    data-purecounter-duration="2">50</span>
-                  <span class="stat-label">Medical Specialists</span>
+                  <span class="stat-number" data-purecounter-start="0" data-purecounter-end="85"
+                    data-purecounter-duration="2">85</span>
+                  <span class="stat-label">Expert Professionals</span>
                 </div>
+                
               </div><!-- End Stats Grid -->
             </div><!-- End About Content -->
           </div>
 
           <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
             <div class="image-wrapper">
-              <img src="assets/img/health/facilities-6.webp" class="img-fluid main-image" alt="Healthcare facility">
+              <img src="assets/img/health/facilities-6.webp" class="img-fluid main-image" alt="Harnoor Pallak Construction - Premium building site and workshop">
               <div class="floating-image" data-aos="zoom-in" data-aos-delay="400">
-                <img src="assets/img/health/staff-8.webp" class="img-fluid" alt="Medical team">
+                <img src="assets/img/health/staff-8.webp" class="img-fluid" alt="Our expert construction team on a luxury residential project">
               </div>
             </div><!-- End Image Wrapper -->
           </div>
         </div>
 
+        <!-- Core Values -->
         <div class="values-section" data-aos="fade-up" data-aos-delay="300">
           <div class="row">
             <div class="col-lg-12 text-center">
               <h3>Our Core Values</h3>
-              <p class="section-description">These principles guide everything we do in our commitment to exceptional
-                healthcare</p>
+              <p class="section-description">These principles guide every decision, every cut, and every finish we deliver.</p>
             </div>
           </div>
 
-          <div class="row">
+          <div class="row g-4">
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
               <div class="value-item">
                 <div class="value-icon">
-                  <i class="bi bi-heart-pulse"></i>
+                  <i class="bi bi-hammer"></i>
                 </div>
-                <h4>Compassion</h4>
-                <p>Providing care with empathy and understanding for every patient's unique needs and circumstances.</p>
+                <h4>Craftsmanship</h4>
+                <p>Uncompromising attention to detail and the highest standards of quality in every joint, finish, and structure we build.</p>
               </div>
             </div>
 
@@ -188,66 +521,66 @@
                 <div class="value-icon">
                   <i class="bi bi-shield-check"></i>
                 </div>
-                <h4>Excellence</h4>
-                <p>Maintaining the highest standards of medical care through continuous learning and innovation.</p>
+                <h4>Integrity</h4>
+                <p>Transparent communication, honest timelines, and ethical practices. Your trust is the foundation of every project.</p>
               </div>
             </div>
 
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
               <div class="value-item">
                 <div class="value-icon">
-                  <i class="bi bi-people"></i>
+                  <i class="bi bi-lightbulb"></i>
                 </div>
-                <h4>Integrity</h4>
-                <p>Building trust through honest communication and ethical practices in all our interactions.</p>
+                <h4>Innovation</h4>
+                <p>Embracing advanced building technologies, sustainable practices, and smart design solutions that future-proof your investment.</p>
               </div>
             </div>
 
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
               <div class="value-item">
                 <div class="value-icon">
-                  <i class="bi bi-lightbulb"></i>
+                  <i class="bi bi-people"></i>
                 </div>
-                <h4>Innovation</h4>
-                <p>Embracing cutting-edge technology and treatments to improve patient outcomes.</p>
+                <h4>Partnership</h4>
+                <p>We treat every client like family. Your vision becomes our mission from the first consultation to the final key handover.</p>
               </div>
             </div>
           </div><!-- End Values Row -->
         </div><!-- End Values Section -->
 
+        <!-- Accreditations -->
         <div class="certifications-section" data-aos="fade-up" data-aos-delay="400">
           <div class="row">
             <div class="col-lg-12 text-center">
-              <h3>Accreditations &amp; Certifications</h3>
-              <p class="section-description">Recognized by leading healthcare organizations for our commitment to
-                quality care</p>
+              <h3>Licenses, Accreditations &amp; Recognition</h3>
+              <p class="section-description">Proudly certified and recognized by Alberta’s leading construction authorities and industry bodies.</p>
             </div>
           </div>
 
-          <div class="row justify-content-center">
+          <div class="row justify-content-center g-3">
             <div class="col-lg-2 col-md-3 col-sm-4 col-6" data-aos="zoom-in" data-aos-delay="100">
               <div class="certification-item">
-                <img src="assets/img/clients/clients-1.webp" class="img-fluid" alt="Healthcare certification">
+                <img src="assets/img/clients/clients-1.webp" class="img-fluid" alt="Alberta Construction Safety Association">
               </div>
             </div>
             <div class="col-lg-2 col-md-3 col-sm-4 col-6" data-aos="zoom-in" data-aos-delay="200">
               <div class="certification-item">
-                <img src="assets/img/clients/clients-2.webp" class="img-fluid" alt="Medical accreditation">
+                <img src="assets/img/clients/clients-2.webp" class="img-fluid" alt="BBB Accredited Business">
               </div>
             </div>
             <div class="col-lg-2 col-md-3 col-sm-4 col-6" data-aos="zoom-in" data-aos-delay="300">
               <div class="certification-item">
-                <img src="assets/img/clients/clients-3.webp" class="img-fluid" alt="Healthcare certification">
+                <img src="assets/img/clients/clients-3.webp" class="img-fluid" alt="Alberta Home Builders Association">
               </div>
             </div>
             <div class="col-lg-2 col-md-3 col-sm-4 col-6" data-aos="zoom-in" data-aos-delay="400">
               <div class="certification-item">
-                <img src="assets/img/clients/clients-4.webp" class="img-fluid" alt="Medical certification">
+                <img src="assets/img/clients/clients-4.webp" class="img-fluid" alt="Certified Professional Builder">
               </div>
             </div>
             <div class="col-lg-2 col-md-3 col-sm-4 col-6" data-aos="zoom-in" data-aos-delay="500">
               <div class="certification-item">
-                <img src="assets/img/clients/clients-5.webp" class="img-fluid" alt="Healthcare accreditation">
+                <img src="assets/img/clients/clients-5.webp" class="img-fluid" alt="LEED &amp; Sustainable Building Partner">
               </div>
             </div>
           </div><!-- End Certifications Row -->
@@ -257,29 +590,1071 @@
 
     </section><!-- /About Section -->
 
-  </main>  <footer id="footer" class="hp-footer">
+    <!-- ========== FULL VIP MEMBERS SECTION (id="members") ========== -->
+    <section id="members" class="members section">
 
-    <div class="hp-footer__wave">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M0,64 C300,120 900,0 1200,64 L1200,120 L0,120 Z" fill="#ffffff"></path>
-      </svg>
-    </div>
-
-    <div class="hp-footer__cta">
-      <div class="container">
-        <div class="hp-footer__cta-box" data-aos="fade-up">
-          <div>
-            <span class="hp-footer__cta-badge">Ready to Build?</span>
-            <h3>Let's Bring Your Construction Vision to Life</h3>
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-12 text-center mb-5">
+            <h2 class="section-title">Meet Our Expert Team</h2>
+            <p class="section-subtitle">The skilled professionals, master builders, and visionary leaders who bring every Harnoor Pallak Construction project to life with precision and passion.</p>
           </div>
-          <a href="appointment.html" class="hp-footer__cta-btn">
-            Get A Free Quote <i class="bi bi-arrow-right"></i>
-          </a>
         </div>
+
+        <div class="row g-4">
+
+          <!-- Member 1 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="member-card">
+              <div class="member-image">
+                <img src="assets/img/hero.png" alt="Alaxis Jone - Founder">
+              </div>
+              <div class="member-info">
+                <h4>Alaxis Jone</h4>
+                <span class="role">Founder</span>
+                <p>With over 25 years of hands-on experience, Alaxis leads every major project with an uncompromising eye for detail and a passion for timeless Alberta architecture.</p>
+                <div class="member-expertise">Specializes in luxury custom homes & heritage restorations</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Member 2 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+            <div class="member-card">
+              <div class="member-image">
+                <img src="assets/img/health/staff-8.webp" alt="Justin Novak - Senior Advisor" >
+              </div>
+              <div class="member-info">
+                <h4>Justin Novak</h4>
+                <span class="role">Senior Advisor</span>
+                <p>Award-winning architect with a deep understanding of modern prairie design and sustainable building practices that blend beautifully with Calgary’s landscape.</p>
+                <div class="member-expertise">Expert in contemporary & mountain-modern residences</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Member 3 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="member-card">
+              <div class="member-image">
+                <img src="assets/img/health/staff-8.webp" alt="Edward Smith - Engineer">
+              </div>
+              <div class="member-info">
+                <h4>Edward Smith</h4>
+                <span class="role">Engineer</span>
+                <p>Ensures every project runs with military precision — from permitting and scheduling to on-site execution and final delivery.</p>
+                <div class="member-expertise">Large-scale commercial & multi-family projects</div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+    </section><!-- /Members Section -->
+
+<!-- ========== FULL VIP TESTIMONIALS SECTION ========== -->
+<section id="testimonials" class="testimonials section">
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="row justify-content-center text-center mb-5">
+      <div class="col-lg-8">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <p class="section-subtitle">
+          Real stories from homeowners and business owners who trusted us to build their dreams.
+        </p>
       </div>
     </div>
 
-    <div class="hp-footer__contact-row">
+    <!-- Swiper Testimonials -->
+    <div class="swiper testimonials-swiper">
+      <div class="swiper-wrapper">
+
+        <!-- Testimonial 1 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <div class="quote-icon">
+              <i class="bi bi-quote"></i>
+            </div>
+            <p class="testimonial-text">
+              "Harnoor Pallak Construction built our dream home in the foothills. The attention to detail, 
+              quality of work, and professionalism was beyond anything we expected. Truly world-class."
+            </p>
+            <div class="client-info">
+              <img src="assets/img/health/staff-8.webp" alt="Sarah Thompson" class="client-img">
+              <div>
+                <h5>Sarah &amp; James Thompson</h5>
+                <span>Custom Homeowners, Bragg Creek</span>
+              </div>
+            </div>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <div class="quote-icon">
+              <i class="bi bi-quote"></i>
+            </div>
+            <p class="testimonial-text">
+              "They completely transformed our 1980s office building into a modern, beautiful workspace. 
+              On time, on budget, and the finish quality is outstanding. Highly recommended!"
+            </p>
+            <div class="client-info">
+              <img src="assets/img/health/staff-8.webp" alt="Michael Chen" class="client-img">
+              <div>
+                <h5>Michael Chen</h5>
+                <span>CEO, Summit Financial Group</span>
+              </div>
+            </div>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <div class="quote-icon">
+              <i class="bi bi-quote"></i>
+            </div>
+            <p class="testimonial-text">
+              "From the first meeting to the final walkthrough, the entire team was professional and 
+              caring. Our kitchen and living area renovation looks like it came out of a magazine."
+            </p>
+            <div class="client-info">
+              <img src="assets/img/health/staff-8.webp" alt="Priya Sharma" class="client-img">
+              <div>
+                <h5>Priya &amp; Raj Sharma</h5>
+                <span>Homeowners, Aspen Woods</span>
+              </div>
+            </div>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <div class="quote-icon">
+              <i class="bi bi-quote"></i>
+            </div>
+            <p class="testimonial-text">
+              "We hired them for a large commercial plaza. Their project management was flawless. 
+              Zero delays, excellent communication, and the final result exceeded our expectations."
+            </p>
+            <div class="client-info">
+              <img src="assets/img/health/staff-8.webp" alt="David Patel" class="client-img">
+              <div>
+                <h5>David Patel</h5>
+                <span>Director, Maple Grove Developments</span>
+              </div>
+            </div>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Swiper Navigation -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== INTERNAL VIP STYLING + JS ========== -->
+<style>
+  :root {
+    --hp-terracotta: #77301a;
+    --hp-gold: #9a721d;
+    --hp-gold-soft: #f5edd8;
+  }
+
+  .testimonials.section {
+    background: #ffffff;
+    padding: 90px 0;
+  }
+
+  .testimonials .section-title {
+    font-size: 2.75rem;
+    font-weight: 800;
+    color: var(--hp-terracotta);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+  }
+
+  .testimonials .section-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, var(--hp-terracotta), var(--hp-gold));
+    border-radius: 4px;
+  }
+
+  .testimonials .section-subtitle {
+    color: #555;
+    font-size: 1.15rem;
+    max-width: 620px;
+    margin: 15px auto 0;
+  }
+
+  .testimonial-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 2.2rem 2rem 2rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--hp-gold-soft);
+    height: 100%;
+    position: relative;
+    transition: all 0.4s ease;
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px rgba(119, 48, 26, 0.15);
+    border-color: var(--hp-gold);
+  }
+
+  .quote-icon {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 3.5rem;
+    color: var(--hp-gold-soft);
+    opacity: 0.6;
+  }
+
+  .testimonial-text {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #444;
+    margin-bottom: 1.8rem;
+    font-style: italic;
+  }
+
+  .client-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 1.5rem;
+  }
+
+  .client-img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--hp-gold-soft);
+  }
+
+  .client-info h5 {
+    color: var(--hp-terracotta);
+    font-weight: 700;
+    margin-bottom: 3px;
+    font-size: 1.1rem;
+  }
+
+  .client-info span {
+    color: #666;
+    font-size: 0.9rem;
+  }
+
+  .stars {
+    margin-top: 12px;
+    color: var(--hp-gold);
+    font-size: 1.1rem;
+  }
+
+  /* ========== IMPROVED SWIPER BUTTONS (Smaller & Premium) ========== */
+  .testimonials-swiper {
+    padding-bottom: 55px;
+  }
+
+  .testimonials-swiper .swiper-button-next,
+  .testimonials-swiper .swiper-button-prev {
+    width: 42px;
+    height: 42px;
+    background: #ffffff;
+    border: 1.5px solid var(--hp-gold);
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    color: var(--hp-gold);
+    transition: all 0.3s ease;
+  }
+
+  .testimonials-swiper .swiper-button-next:hover,
+  .testimonials-swiper .swiper-button-prev:hover {
+    background: var(--hp-gold);
+    color: #ffffff;
+    border-color: var(--hp-gold);
+    transform: scale(1.05);
+  }
+
+  /* Arrow Icon Size - Chhota kiya hai */
+  .testimonials-swiper .swiper-button-next::after,
+  .testimonials-swiper .swiper-button-prev::after {
+    font-size: 16px;           /* ← Arrow chhota kar diya */
+    font-weight: 700;
+  }
+
+  .testimonials-swiper .swiper-button-prev::after {
+    margin-left: -2px;
+  }
+
+  .testimonials-swiper .swiper-button-next::after {
+    margin-right: -2px;
+  }
+
+  /* Pagination */
+  .testimonials-swiper .swiper-pagination-bullet {
+    background: var(--hp-gold);
+    opacity: 0.4;
+    width: 8px;
+    height: 8px;
+  }
+
+  .testimonials-swiper .swiper-pagination-bullet-active {
+    background: var(--hp-terracotta);
+    opacity: 1;
+    width: 22px;
+    border-radius: 10px;
+  }
+</style>
+
+<script>
+  // Swiper Initialization
+  document.addEventListener("DOMContentLoaded", function () {
+    new Swiper(".testimonials-swiper", {
+      slidesPerView: 1,
+      spaceBetween: 25,
+      loop: true,
+      autoplay: {
+        delay: 4500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        }
+      }
+    });
+  });
+</script>
+
+ <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@600;700&amp;display=swap');
+
+       
+
+        
+
+        .title-font {
+
+            font-family: 'Poppins', system_ui, sans-serif;
+
+            font-weight: 700;
+
+            letter-spacing: -0.025em;
+
+        }
+
+
+
+        .faq-card {
+
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+        }
+
+
+
+        .faq-card:hover {
+
+            transform: translateY(-2px);
+
+        }
+
+
+
+        .faq-content {
+
+            overflow: hidden;
+
+            transition: max-height 0.4s cubic-bezier(0.32, 0.72, 0, 1), 
+
+                       padding-bottom 0.3s ease;
+
+        }
+
+
+
+        .speech-bubble {
+
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25), 
+
+                       0 10px 10px -6px rgb(0 0 0 / 0.1);
+
+            transition: transform 0.3s ease;
+
+        }
+
+
+
+        .speech-bubble:hover {
+
+            transform: scale(1.03) rotate(var(--rotate));
+
+        }
+
+
+
+        .premium-shadow {
+
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 
+
+                       0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+        }
+
+
+
+        .section-bg {
+
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+
+        }
+
+
+
+        .faq-number {
+
+            font-variant-numeric: tabular-nums;
+
+        }
+
+    </style>
+
+
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <!-- Main FAQ Container -->
+
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-x-14 gap-y-12 items-start">
+
+            
+
+            <!-- LEFT VISUAL SIDE -->
+
+            <div class="lg:col-span-2">
+
+                <!-- Badge -->
+
+                <div class="mb-5">
+
+                    <span class="inline-flex items-center gap-x-2 px-5 py-2 bg-[#77301a]/10 text-[#77301a] text-sm font-bold tracking-[1.5px] rounded-2xl">
+
+                        <i class="fas fa-headset"></i>
+
+                        <span>ANSWERS TO YOUR QUESTIONS</span>
+
+                    </span>
+
+                </div>
+
+
+
+                <!-- Big Title -->
+
+                <h2 class="title-font text-6xl lg:text-5xl xl:text-6xl font-extrabold text-[#77301a] leading-[1.05] tracking-tighter">
+
+                    Frequently Asked<br>
+
+                    Questions <span class="text-[#77301a]">(FAQs)</span>
+
+                </h2>
+
+
+
+                <!-- Decorative Speech Bubbles -->
+
+                <div class="relative mt-14 h-[310px] w-full max-w-[355px] mx-auto lg:mx-0">
+
+                    
+
+                    <!-- F Bubble (Red) -->
+
+                    <div class="speech-bubble absolute top-2 left-3 w-[135px] h-[135px] bg-[#77301a] rounded-[3.5rem] flex items-center justify-center shadow-2xl -rotate-[14deg] z-10"
+
+                         style="--rotate: -14deg;">
+
+                        <span class="text-white text-[78px] font-black tracking-[-5px] drop-shadow-md">F</span>
+
+                    </div>
+
+                    
+
+                    <!-- A Bubble (Yellow) -->
+
+                    <div class="speech-bubble absolute top-[68px] left-[95px] w-[148px] h-[148px] bg-[#9a721d] rounded-[3.5rem] flex items-center justify-center shadow-2xl rotate-[7deg] z-20"
+
+                         style="--rotate: 7deg;">
+
+                        <span class="text-white text-[85px] font-black tracking-[-5px]">A</span>
+
+                    </div>
+
+                    
+
+                    <!-- Q Bubble (Red) -->
+
+                    <div class="speech-bubble absolute top-[155px] left-[18px] w-[135px] h-[135px] bg-[#77301a] rounded-[3.5rem] flex items-center justify-center shadow-2xl rotate-[13deg]"
+
+                         style="--rotate: 13deg;">
+
+                        <span class="text-white text-[78px] font-black tracking-[-5px] drop-shadow-md">Q</span>
+
+                    </div>
+
+                    
+
+                    <!-- Subtle glow accent -->
+
+                    <div class="absolute -bottom-2 -right-2 w-20 h-20 bg-[#9a721d]/20 rounded-full blur-2xl"></div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RIGHT FAQ LIST -->
+
+            <div class="lg:col-span-3">
+
+                <div class="space-y-[13px]">
+
+                    
+
+                    <!-- FAQ 1 - OPEN -->
+
+                    <div class="faq-card group bg-white border-2 border-[#9a721d] shadow-xl rounded-3xl overflow-hidden">
+
+                        <button onclick="toggleFAQ(this)" 
+
+                                class="w-full flex items-center justify-between px-7 py-[23px] text-left hover:bg-[#f5edd8]/60 transition-colors">
+
+                            <div class="flex items-center gap-x-4">
+
+                                <span class="faq-number text-[#77301a] font-extrabold text-[23px] w-9">1.</span>
+
+                                <span class="text-[17.5px] font-semibold text-[#77301a] leading-tight pr-3">What services does your company offer?</span>
+
+                            </div>
+
+                            <div class="faq-icon flex-shrink-0 w-9 h-9 flex items-center justify-center text-[#77301a]">
+
+                                <!-- Minus icon injected by JS -->
+
+                            </div>
+
+                        </button>
+
+                        <div class="faq-content px-7 pb-7 text-[#8a6d5c] text-[15px] leading-relaxed" 
+
+                             style="max-height: 210px;">
+
+                            At HaroonPatak Construction Ltd., we offer a comprehensive range of services including framing, insulation, drywall installation, tapping, drywall finishing, concrete finishing, mudtap and texture application, as well as interior and exterior painting.
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FAQ 2 -->
+
+                    <div class="faq-card group bg-white border border-[#9a721d]/20 shadow-sm hover:shadow-md rounded-3xl overflow-hidden">
+
+                        <button onclick="toggleFAQ(this)" 
+
+                                class="w-full flex items-center justify-between px-7 py-[23px] text-left hover:bg-[#f5edd8]/60 transition-colors">
+
+                            <div class="flex items-center gap-x-4">
+
+                                <span class="faq-number text-[#77301a] font-extrabold text-[23px] w-9">2.</span>
+
+                                <span class="text-[17.5px] font-semibold text-[#77301a] leading-tight pr-3">How do I request a quote for services?</span>
+
+                            </div>
+
+                            <div class="faq-icon flex-shrink-0 w-9 h-9 flex items-center justify-center text-[#77301a]">
+
+                                <!-- Plus icon injected by JS -->
+
+                            </div>
+
+                        </button>
+
+                        <div class="faq-content px-7 text-[#8a6d5c] text-[15px] leading-relaxed" 
+
+                             style="max-height: 0px;">
+
+                            To request a quote for our services, simply fill out the contact form on our website, call us directly, or email your project details. Our team will get back to you within 24 hours with a customized and competitive quote.
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FAQ 3 -->
+
+                    <div class="faq-card group bg-white border border-[#9a721d]/20 shadow-sm hover:shadow-md rounded-3xl overflow-hidden">
+
+                        <button onclick="toggleFAQ(this)" 
+
+                                class="w-full flex items-center justify-between px-7 py-[23px] text-left hover:bg-[#f5edd8]/60 transition-colors">
+
+                            <div class="flex items-center gap-x-4">
+
+                                <span class="faq-number text-[#77301a] font-extrabold text-[23px] w-9">3.</span>
+
+                                <span class="text-[17.5px] font-semibold text-[#77301a] leading-tight pr-3">What sets your drywall and tapping services apart?</span>
+
+                            </div>
+
+                            <div class="faq-icon flex-shrink-0 w-9 h-9 flex items-center justify-center text-[#77301a]">
+
+                                <!-- Plus icon injected by JS -->
+
+                            </div>
+
+                        </button>
+
+                        <div class="faq-content px-7 text-[#8a6d5c] text-[15px] leading-relaxed" 
+
+                             style="max-height: 0px;">
+
+                            Our drywall and tapping services stand out because of our certified team, premium-grade materials, exceptional attention to detail, and commitment to delivering perfectly smooth and durable finishes on every project.
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FAQ 4 -->
+
+                    <div class="faq-card group bg-white border border-[#9a721d]/20 shadow-sm hover:shadow-md rounded-3xl overflow-hidden">
+
+                        <button onclick="toggleFAQ(this)" 
+
+                                class="w-full flex items-center justify-between px-7 py-[23px] text-left hover:bg-[#f5edd8]/60 transition-colors">
+
+                            <div class="flex items-center gap-x-4">
+
+                                <span class="faq-number text-[#77301a] font-extrabold text-[23px] w-9">4.</span>
+
+                                <span class="text-[17.5px] font-semibold text-[#77301a] leading-tight pr-3">Can you explain the process of mudtap and texture application?</span>
+
+                            </div>
+
+                            <div class="faq-icon flex-shrink-0 w-9 h-9 flex items-center justify-center text-[#77301a]">
+
+                                <!-- Plus icon injected by JS -->
+
+                            </div>
+
+                        </button>
+
+                        <div class="faq-content px-7 text-[#8a6d5c] text-[15px] leading-relaxed" 
+
+                             style="max-height: 0px;">
+
+                            The process starts with surface preparation, applying joint compound (mud), embedding tape over seams, building multiple coats with sanding between layers, and finishing with your preferred texture (knockdown, orange peel, or smooth) ready for painting.
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FAQ 5 -->
+
+                    <div class="faq-card group bg-white border border-[#9a721d]/20 shadow-sm hover:shadow-md rounded-3xl overflow-hidden">
+
+                        <button onclick="toggleFAQ(this)" 
+
+                                class="w-full flex items-center justify-between px-7 py-[23px] text-left hover:bg-[#f5edd8]/60 transition-colors">
+
+                            <div class="flex items-center gap-x-4">
+
+                                <span class="faq-number text-[#77301a] font-extrabold text-[23px] w-9">5.</span>
+
+                                <span class="text-[17.5px] font-semibold text-[#77301a] leading-tight pr-3">How do you ensure quality in your painting services?</span>
+
+                            </div>
+
+                            <div class="faq-icon flex-shrink-0 w-9 h-9 flex items-center justify-center text-[#77301a]">
+
+                                <!-- Plus icon injected by JS -->
+
+                            </div>
+
+                        </button>
+
+                        <div class="faq-content px-7 text-[#8a6d5c] text-[15px] leading-relaxed" 
+
+                             style="max-height: 0px;">
+
+                            We guarantee quality through expert surface preparation, top-tier paints from trusted brands, highly skilled painters, multiple even coats, and rigorous final inspections. We back every job with our customer satisfaction guarantee.
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FAQ 6 -->
+
+                    <div class="faq-card group bg-white border border-[#9a721d]/20 shadow-sm hover:shadow-md rounded-3xl overflow-hidden">
+
+                        <button onclick="toggleFAQ(this)" 
+
+                                class="w-full flex items-center justify-between px-7 py-[23px] text-left hover:bg-[#f5edd8]/60 transition-colors">
+
+                            <div class="flex items-center gap-x-4">
+
+                                <span class="faq-number text-[#77301a] font-extrabold text-[23px] w-9">6.</span>
+
+                                <span class="text-[17.5px] font-semibold text-[#77301a] leading-tight pr-3">Are your concrete finishing services suitable for both residential and commercial projects?</span>
+
+                            </div>
+
+                            <div class="faq-icon flex-shrink-0 w-9 h-9 flex items-center justify-center text-[#77301a]">
+
+                                <!-- Plus icon injected by JS -->
+
+                            </div>
+
+                        </button>
+
+                        <div class="faq-content px-7 text-[#8a6d5c] text-[15px] leading-relaxed" 
+
+                             style="max-height: 0px;">
+
+                            Yes! Our concrete finishing services are versatile and ideal for both residential projects (driveways, patios, basements) and large-scale commercial work (warehouse floors, plazas, retail spaces). We adapt techniques to perfectly match your project needs.
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FAQ 7 -->
+
+                    <div class="faq-card group bg-white border border-[#9a721d]/20 shadow-sm hover:shadow-md rounded-3xl overflow-hidden">
+
+                        <button onclick="toggleFAQ(this)" 
+
+                                class="w-full flex items-center justify-between px-7 py-[23px] text-left hover:bg-[#f5edd8]/60 transition-colors">
+
+                            <div class="flex items-center gap-x-4">
+
+                                <span class="faq-number text-[#77301a] font-extrabold text-[23px] w-9">7.</span>
+
+                                <span class="text-[17.5px] font-semibold text-[#77301a] leading-tight pr-3">What should I expect during the framing and insulation process?</span>
+
+                            </div>
+
+                            <div class="faq-icon flex-shrink-0 w-9 h-9 flex items-center justify-center text-[#77301a]">
+
+                                <!-- Plus icon injected by JS -->
+
+                            </div>
+
+                        </button>
+
+                        <div class="faq-content px-7 text-[#8a6d5c] text-[15px] leading-relaxed" 
+
+                             style="max-height: 0px;">
+
+                            You can expect professional structural framing, high-performance insulation installation for maximum energy efficiency, clean and organized worksite, regular updates, and full compliance with building codes — all handled by our expert crew from start to finish.
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+            
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+
+        // Tailwind script configuration
+
+        function initializeTailwind() {
+
+            document.documentElement.style.setProperty('--accent-red', '#77301a');
+
+            document.documentElement.style.setProperty('--accent-yellow', '#9a721d');
+
+        }
+
+
+
+        // SVG Icons
+
+        const plusSVG = `
+
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+
+            </svg>
+
+        `;
+
+        
+
+        const minusSVG = `
+
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20 12H4" />
+
+            </svg>
+
+        `;
+
+
+
+        // Toggle FAQ function
+
+        function toggleFAQ(button) {
+
+            const content = button.nextElementSibling;
+
+            const iconContainer = button.querySelector('.faq-icon');
+
+            const card = button.parentElement;
+
+            const isOpen = content.style.maxHeight && parseInt(content.style.maxHeight) > 50;
+
+
+
+            // Close all other FAQs
+
+            document.querySelectorAll('.faq-content').forEach(item => {
+
+                if (item !== content) {
+
+                    item.style.maxHeight = '0px';
+
+                    const parentCard = item.parentElement;
+
+                    parentCard.classList.remove('hp-faq-open', 'shadow-xl');
+
+                    parentCard.classList.add('border-[#9a721d]/20', 'shadow-sm');
+
+                    
+
+                    const otherIcon = item.previousElementSibling.querySelector('.faq-icon');
+
+                    if (otherIcon) otherIcon.innerHTML = plusSVG;
+
+                }
+
+            });
+
+
+
+            // Toggle current
+
+            if (!isOpen) {
+
+                // OPEN
+
+                content.style.maxHeight = (content.scrollHeight + 40) + 'px';
+
+                card.classList.remove('border-[#9a721d]/20', 'shadow-sm');
+
+                card.classList.add('hp-faq-open', 'shadow-xl');
+
+                iconContainer.innerHTML = minusSVG;
+
+            } else {
+
+                // CLOSE
+
+                content.style.maxHeight = '0px';
+
+                card.classList.remove('hp-faq-open', 'shadow-xl');
+
+                card.classList.add('border-[#9a721d]/20', 'shadow-sm');
+
+                iconContainer.innerHTML = plusSVG;
+
+            }
+
+        }
+
+
+
+        // Initialize everything
+
+        function initFAQSection() {
+
+            initializeTailwind();
+
+
+
+            // Set initial icons
+
+            const icons = document.querySelectorAll('.faq-icon');
+
+            icons.forEach((icon, index) => {
+
+                if (index === 0) {
+
+                    icon.innerHTML = minusSVG;
+
+                } else {
+
+                    icon.innerHTML = plusSVG;
+
+                }
+
+            });
+
+
+
+            // Make sure first card has premium open styling
+
+            const firstCard = document.querySelector('.faq-card');
+
+            if (firstCard) {
+
+                firstCard.classList.add('hp-faq-open', 'shadow-xl');
+
+                firstCard.classList.remove('border-[#9a721d]/20', 'shadow-sm');
+
+            }
+
+
+
+            // Optional: Keyboard accessibility (Escape closes all)
+
+            document.addEventListener('keydown', function(e) {
+
+                if (e.key === "Escape") {
+
+                    document.querySelectorAll('.faq-content').forEach(item => {
+
+                        item.style.maxHeight = '0px';
+
+                        const parentCard = item.parentElement;
+
+                        parentCard.classList.remove('hp-faq-open', 'shadow-xl');
+
+                        parentCard.classList.add('border-[#9a721d]/20', 'shadow-sm');
+
+                        
+
+                        const icon = item.previousElementSibling.querySelector('.faq-icon');
+
+                        if (icon) icon.innerHTML = plusSVG;
+
+                    });
+
+                }
+
+            });
+
+        }
+
+
+
+        // Boot up
+
+        window.onload = initFAQSection;
+
+    </script>
+
+
+
+  </main>
+
+  <footer id="footer" class="hp-footer mt-5">
+
+  
+
+   
+
+    <div class="hp-footer__contact-row mt-5">
       <div class="container">
         <div class="row g-3">
           <div class="col-lg-4 col-md-4 col-12">
@@ -392,6 +1767,7 @@
     </div>
 
   </footer>
+
 
   <!-- Scroll Top -->
   <a href="#!" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i

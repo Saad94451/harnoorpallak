@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Service Details - Harnoor Pallak Construction</title>
+
+  <!-- Same Links -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- INTERNAL VIP STYLING -->
+  <style>
+    :root {
+      --hp-terracotta: #77301a;
+      --hp-gold: #9a721d;
+      --hp-gold-soft: #f5edd8;
+    }
+
+    .service-hero {
+      background: linear-gradient(rgba(119, 48, 26, 0.85), rgba(119, 48, 26, 0.75)), url('assets/img/health/orthopedics-1.webp');
+      background-size: cover;
+      background-position: center;
+      padding: 120px 0 80px;
+      color: white;
+    }
+
+    .service-hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .service-content {
+      padding: 60px 0;
+    }
+
+    .service-main-image {
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      border: 8px solid #fff;
+    }
+
+    .section-title {
+      color: var(--hp-terracotta);
+      font-weight: 800;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 12px;
+    }
+
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(to right, var(--hp-terracotta), var(--hp-gold));
+      border-radius: 4px;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .feature-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--hp-gold-soft);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.05rem;
+    }
+
+    .feature-list li i {
+      color: var(--hp-gold);
+      font-size: 1.3rem;
+    }
+
+    .vip-card {
+      background: #fff;
+      border-radius: 18px;
+      padding: 2rem;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+      border: 1px solid var(--hp-gold-soft);
+      transition: all 0.3s ease;
+    }
+
+    .vip-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--hp-gold);
+    }
+
+    .process-step {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 2rem;
+    }
+
+    .step-number {
+      width: 55px;
+      height: 55px;
+      background: linear-gradient(135deg, var(--hp-terracotta), var(--hp-gold));
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER (SAME) -->
+  <header id="header" class="header fixed-top">
+    <div class="topbar d-flex align-items-center dark-background">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope"><a href="mailto:Info@harnoorpallakconstruction.ca">Info@harnoorpallakconstruction.ca</a></i>
+          <i class="bi bi-phone ms-4"><span>403-667-1409</span></i>
+        </div>
+        <div class="social-links d-none d-md-flex">
+          <a href="#!" class="twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#!" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#!" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#!" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="branding d-flex align-items-center">
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo">
+          <img src="assets/img/logoremove.png" alt="Harnoor Pallak Logo" style="max-height: 150px; width: 200px;">
+        </a>
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown"><a href="about.html"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul><li><a href="doctors.html">Members</a></li></ul>
+            </li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="departments.html">Portfolio</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="appointment.html" class="btn-quote">Get A Quote</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- DYNAMIC HERO -->
+  <div class="service-hero mt-5" id="service-hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 id="service-title" class="text-center">Service Details</h1>
+          <p id="service-subtitle" class="lead mt-3 text-center">Premium construction services with unmatched quality.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <section class="service-content">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+
+        <!-- Image -->
+        <div class="col-lg-6" data-aos="fade-right">
+          <img id="service-image" src="assets/img/health/orthopedics-1.webp" class="img-fluid service-main-image" alt="Service Image">
+        </div>
+
+        <!-- Content -->
+        <div class="col-lg-6" data-aos="fade-left">
+          <h2 class="section-title mb-4" id="service-heading">Service Overview</h2>
+          <p id="service-description" class="fs-5 text-muted"></p>
+
+          <h5 class="mt-4 mb-3" style="color: var(--hp-terracotta); font-weight: 700;">Key Features</h5>
+          <ul class="feature-list" id="service-features"></ul>
+        </div>
+      </div>
+
+      <!-- Process Section -->
+      <div class="row mt-5">
+        <div class="col-12">
+          <h2 class="section-title mb-4">Our Process</h2>
+        </div>
+        <div class="col-md-4">
+          <div class="vip-card">
+            <div class="process-step">
+              <div class="step-number">01</div>
+              <div>
+                <h5 style="color: var(--hp-terracotta);">Consultation</h5>
+                <p class="mb-0">We understand your vision and requirements in detail.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="vip-card">
+            <div class="process-step">
+              <div class="step-number">02</div>
+              <div>
+                <h5 style="color: var(--hp-terracotta);">Planning &amp; Execution</h5>
+                <p class="mb-0">Detailed planning followed by expert execution with premium materials.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="vip-card">
+            <div class="process-step">
+              <div class="step-number">03</div>
+              <div>
+                <h5 style="color: var(--hp-terracotta);">Final Delivery</h5>
+                <p class="mb-0">Thorough quality check and handover with complete satisfaction.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="text-center mt-5 pt-4">
+        <a href="appointment.html" class="btn btn-lg px-5 py-3" 
+           style="background: var(--hp-terracotta); color: white; border-radius: 50px; font-weight: 700;">
+          Get a Free Quote for This Service <i class="bi bi-arrow-right ms-2"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER (SAME) -->
+  <footer id="footer" class="hp-footer">
+    <!-- Same footer code as before (copy from services.html) -->
+    <div class="hp-footer__wave">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,64 C300,120 900,0 1200,64 L1200,120 L0,120 Z" fill="#ffffff"></path>
+      </svg>
+    </div>
+    <div class="hp-footer__cta">
+      <div class="container">
+        <div class="hp-footer__cta-box" data-aos="fade-up">
+          <div>
+            <span class="hp-footer__cta-badge">Ready to Build?</span>
+            <h3>Let's Bring Your Construction Vision to Life</h3>
+          </div>
+          <a href="appointment.html" class="hp-footer__cta-btn">
+            Get A Free Quote <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Contact Row + Main Footer (same as services.html) -->
+    <div class="hp-footer__contact-row">
+      <div class="container">
+        <div class="row g-3">
+          <div class="col-lg-4 col-md-4 col-12">
+            <div class="hp-footer__contact-card">
+              <div class="hp-footer__contact-icon"><i class="bi bi-geo-alt-fill"></i></div>
+              <div class="hp-footer__contact-body">
+                <span class="hp-footer__contact-label">Location</span>
+                <span class="hp-footer__contact-value">Calgary, Alberta, Canada</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-12">
+            <div class="hp-footer__contact-card">
+              <div class="hp-footer__contact-icon"><i class="bi bi-telephone-fill"></i></div>
+              <div class="hp-footer__contact-body">
+                <span class="hp-footer__contact-label">Call Us</span>
+                <a href="tel:4036671409" class="hp-footer__contact-value">403-667-1409</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-12">
+            <div class="hp-footer__contact-card">
+              <div class="hp-footer__contact-icon"><i class="bi bi-envelope-fill"></i></div>
+              <div class="hp-footer__contact-body">
+                <span class="hp-footer__contact-label">Email</span>
+                <a href="mailto:Info@harnoorpallakconstruction.ca" class="hp-footer__contact-value">Info@harnoorpallakconstruction.ca</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hp-footer__main">
+      <div class="container">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-4 col-md-6">
+            <a href="index.html">
+              <img src="assets/img/logoremove.png" alt="Harnoor Pallak Construction" class="hp-footer__brand-logo">
+            </a>
+            <p class="hp-footer__brand-text">Building exceptional structures through quality craftsmanship, innovative solutions, and reliable service that exceeds client expectations.</p>
+          </div>
+          <div class="col-lg-2 col-md-6 col-6">
+            <h6 class="hp-footer__heading">Quick Links</h6>
+            <ul class="hp-footer__links">
+              <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
+              <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
+              <li><a href="services.html"><i class="bi bi-chevron-right"></i> Our Services</a></li>
+              <li><a href="departments.html"><i class="bi bi-chevron-right"></i> Portfolio</a></li>
+              <li><a href="doctors.html"><i class="bi bi-chevron-right"></i> Our Team</a></li>
+              <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6 col-6">
+            <h6 class="hp-footer__heading">Our Services</h6>
+            <ul class="hp-footer__links">
+              <li><a href="services.html"><i class="bi bi-chevron-right"></i> Commercial Building</a></li>
+              <li><a href="services.html"><i class="bi bi-chevron-right"></i> Residential Homes</a></li>
+              <li><a href="services.html"><i class="bi bi-chevron-right"></i> Renovations</a></li>
+              <li><a href="services.html"><i class="bi bi-chevron-right"></i> Masonry Work</a></li>
+              <li><a href="services.html"><i class="bi bi-chevron-right"></i> Interior Finishing</a></li>
+              <li><a href="services.html"><i class="bi bi-chevron-right"></i> Electrical &amp; Plumbing</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h6 class="hp-footer__heading">Stay Updated</h6>
+            <p class="hp-footer__newsletter-text">Subscribe for project showcases, construction tips, and exclusive updates from Harnoor Pallak Construction.</p>
+            <form class="hp-footer__form" id="footer-newsletter-form">
+              <input type="email" placeholder="Your email address" required>
+              <button type="submit" id="btn-subscribe">
+                <span>Subscribe</span>
+                <i class="bi bi-send-fill"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hp-footer__bottom">
+      <div class="container">
+        <div class="row align-items-center g-3">
+          <div class="col-lg-6 text-center text-lg-start">
+            <p>&copy; <span>2026</span> <strong>Harnoor Pallak Construction</strong>. All rights reserved.</p>
+          </div>
+          <div class="col-lg-6 text-center text-lg-end">
+            <div class="hp-footer__legal">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+              <a href="contact.html">Support</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // Service Data
+    const servicesData = {
+      framing: {
+        title: "Framing",
+        subtitle: "Strong Foundation. Perfect Structure.",
+        description: "We provide expert wood and steel framing services for residential homes, commercial buildings, and renovations. Our team ensures structural integrity, precision, and compliance with all building codes.",
+        features: [
+          "Wood & Steel Framing",
+          "Load-Bearing Structures",
+          "Custom Home Framing",
+          "Commercial Building Framing",
+          "Structural Repairs & Reinforcement"
+        ]
+      },
+      insulation: {
+        title: "Insulation",
+        subtitle: "Energy Efficient & Comfortable Spaces",
+        description: "High-performance insulation solutions including spray foam, batt, and blown-in insulation to improve energy efficiency, reduce noise, and maintain comfortable indoor temperatures year-round.",
+        features: [
+          "Spray Foam Insulation",
+          "Batt & Roll Insulation",
+          "Blown-In Insulation",
+          "Soundproofing Solutions",
+          "Attic & Wall Insulation"
+        ]
+      },
+      drywall: {
+        title: "Drywall Installation",
+        subtitle: "Smooth & Durable Wall Solutions",
+        description: "Professional drywall installation services for new construction and renovations. We deliver perfectly straight, smooth walls ready for finishing and painting.",
+        features: [
+          "New Construction Drywall",
+          "Renovation & Repair",
+          "Moisture-Resistant Drywall",
+          "Fire-Rated Drywall",
+          "Ceiling & Wall Installation"
+        ]
+      },
+      taping: {
+        title: "Taping & Joint Finishing",
+        subtitle: "Seamless & Professional Finishes",
+        description: "Expert taping, mudding, and joint finishing services to create smooth, flawless drywall surfaces ready for painting or texturing.",
+        features: [
+          "Professional Taping",
+          "Joint Compound Application",
+          "Corner Bead Installation",
+          "Crack Repair",
+          "Level 4 & Level 5 Finishes"
+        ]
+      },
+      "drywall-finisher": {
+        title: "Drywall Finisher",
+        subtitle: "Perfect Finish Every Time",
+        description: "Complete drywall finishing services including sanding, patching, and preparing walls for final paint or texture application with premium results.",
+        features: [
+          "Sanding & Smoothing",
+          "Patch & Repair Work",
+          "Level 5 Finish",
+          "Texture Preparation",
+          "Final Surface Preparation"
+        ]
+      },
+      concrete: {
+        title: "Concrete Finishers",
+        subtitle: "Durable & Beautiful Concrete Surfaces",
+        description: "Professional concrete finishing for driveways, patios, floors, and decorative surfaces with stamped, polished, and colored concrete options.",
+        features: [
+          "Stamped Concrete",
+          "Polished Concrete Floors",
+          "Driveway & Patio Finishing",
+          "Decorative Concrete",
+          "Concrete Repair & Resurfacing"
+        ]
+      },
+      "mud-tape": {
+        title: "Mud Tape & Texture",
+        subtitle: "Custom Wall Textures & Finishes",
+        description: "Professional mudding, taping, and custom texture application including knockdown, orange peel, and smooth finishes for beautiful interior walls.",
+        features: [
+          "Knockdown Texture",
+          "Orange Peel Texture",
+          "Smooth Finish",
+          "Custom Textures",
+          "Ceiling Texture Application"
+        ]
+      },
+      paint: {
+        title: "Interior & Exterior Painting",
+        subtitle: "Premium Paint Finishes",
+        description: "High-quality interior and exterior painting services using premium paints and professional techniques for long-lasting, beautiful results.",
+        features: [
+          "Interior House Painting",
+          "Exterior Painting",
+          "Cabinet & Trim Painting",
+          "Color Consultation",
+          "Premium Paint Products"
+        ]
+      }
+    };
+
+    // Load Service Content
+    function loadServiceContent() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const serviceKey = urlParams.get('service') || 'framing';
+      
+      const data = servicesData[serviceKey] || servicesData['framing'];
+
+      // Update Hero
+      document.getElementById('service-title').textContent = data.title;
+      document.getElementById('service-subtitle').textContent = data.subtitle;
+
+      // Update Content
+      document.getElementById('service-heading').textContent = data.title + " Overview";
+      document.getElementById('service-description').textContent = data.description;
+
+      // Update Features
+      const featuresList = document.getElementById('service-features');
+      featuresList.innerHTML = '';
+      data.features.forEach(feature => {
+        const li = document.createElement('li');
+        li.innerHTML = `<i class="bi bi-check-circle-fill"></i> ${feature}`;
+        featuresList.appendChild(li);
+      });
+
+      // Update Image (same for now as requested)
+      document.getElementById('service-image').alt = data.title;
+    }
+
+    // Initialize
+    window.onload = function() {
+      loadServiceContent();
+    };
+  </script>
+
+</body>
+</html>

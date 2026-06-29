@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Services - Clinic Bootstrap Template</title>
+  <title>Services - Harnoor Pallak Construction</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -30,22 +30,145 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Clinic
-  * Template URL: https://bootstrapmade.com/clinic-bootstrap-template/
-  * Updated: Jul 23 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <!-- INTERNAL VIP STYLES -->
+  <style>
+    :root {
+      --hp-terracotta: #77301a;
+      --hp-gold: #9a721d;
+      --hp-gold-soft: #f5edd8;
+    }
+
+    .page-title .heading-title {
+      color: var(--hp-terracotta);
+      font-weight: 800;
+    }
+
+    .services .service-item {
+      background: #fff;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+      border: 1px solid var(--hp-gold-soft);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      height: 100%;
+    }
+
+    .services .service-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 60px rgba(119, 48, 26, 0.15);
+      border-color: var(--hp-gold);
+    }
+
+    .service-image {
+      position: relative;
+      overflow: hidden;
+      height: 220px;
+    }
+
+    .service-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .service-item:hover .service-image img {
+      transform: scale(1.1);
+    }
+
+    .service-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(119, 48, 26, 0.65), rgba(154, 114, 29, 0.75));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .service-item:hover .service-overlay {
+      opacity: 1;
+    }
+
+    .service-overlay i {
+      font-size: 3.2rem;
+      color: #fff;
+    }
+
+    .service-content {
+      padding: 1.6rem 1.5rem 1.8rem;
+    }
+
+    .service-content h3 {
+      color: var(--hp-terracotta);
+      font-weight: 800;
+      margin-bottom: 0.9rem;
+      font-size: 1.35rem;
+    }
+
+    .service-content p {
+      color: #555;
+      font-size: 0.98rem;
+      line-height: 1.7;
+      margin-bottom: 1.1rem;
+    }
+
+    .service-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 1.3rem;
+    }
+
+    .feature-item {
+      background: var(--hp-gold-soft);
+      color: var(--hp-gold);
+      font-size: 0.82rem;
+      padding: 4px 12px;
+      border-radius: 50px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .service-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--hp-terracotta);
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .service-btn:hover {
+      color: var(--hp-gold);
+      gap: 12px;
+    }
+
+    .service-btn i {
+      transition: transform 0.3s ease;
+    }
+
+    .service-btn:hover i {
+      transform: translateX(4px);
+    }
+  </style>
 </head>
 
-<body class="services-page">  <header id="header" class="header fixed-top">
+<body class="services-page">
 
+  <!-- HEADER (UNCHANGED) -->
+  <header id="header" class="header fixed-top">
     <div class="topbar d-flex align-items-center dark-background">
       <div class="container d-flex justify-content-center justify-content-md-between">
         <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-envelope d-flex align-items-center"><a
-              href="mailto:Info@harnoorpallakconstruction.ca">Info@harnoorpallakconstruction.ca</a></i>
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:Info@harnoorpallakconstruction.ca">Info@harnoorpallakconstruction.ca</a></i>
           <i class="bi bi-phone d-flex align-items-center ms-4"><span>403-667-1409</span></i>
         </div>
         <div class="social-links d-none d-md-flex align-items-center">
@@ -55,52 +178,61 @@
           <a href="#!" class="linkedin"><i class="bi bi-linkedin"></i></a>
         </div>
       </div>
-    </div><!-- End Top Bar -->
+    </div>
 
     <div class="branding d-flex align-items-center">
-
       <div class="container position-relative d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo d-flex align-items-center">
           <img src="assets/img/logoremove.png" alt="Harnoor Pallak Logo" style="max-height: 150px; width: 200px;">
         </a>
 
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li class="dropdown"><a href="about.html"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="doctors.html">Members</a></li>
-              </ul>
-            </li>
-            <li><a href="services.html" class="active">Services</a></li>
-            <li><a href="departments.html">Portfolio</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="appointment.html" class="btn-quote">Get A Quote</a></li>
-          </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
+                <nav id="navmenu" class="navmenu">
 
+                    <ul>
+
+                        <li><a href="index.html">Home</a></li>
+
+                        <li class="dropdown"><a href="about.html"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+
+                            <ul>
+
+                                <li><a href="about.html#members">Members</a></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li><a href="services.html" class="active">Services</a></li>
+
+                        <li><a href="portfolio.html">Portfolio</a></li>
+
+                        <li><a href="blog.html">Blog</a></li>
+
+                        <li><a href="contact.html">Contact</a></li>
+
+                        <li><a href="appointment.html" class="btn-quote">Get A Quote</a></li>
+
+                    </ul>
+
+                    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+
+                </nav>
       </div>
-
     </div>
-
   </header>
 
   <main class="main">
 
-    <!-- Page Title -->
+    <!-- Page Title (REDESIGNED) -->
     <div class="page-title">
       <div class="heading">
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
-              <h1 class="heading-title">Services</h1>
+              <h1 class="heading-title">Our Services</h1>
               <p class="mb-0">
-                Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo
-                odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum
-                debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat
-                ipsum dolorem.
+                From foundation to finishing touches — we deliver premium craftsmanship across every stage of construction. 
+                Quality, precision, and reliability in every project we undertake.
               </p>
             </div>
           </div>
@@ -114,172 +246,172 @@
           </ol>
         </div>
       </nav>
-    </div><!-- End Page Title -->
+    </div>
 
-    <!-- Services Section -->
+    <!-- Services Section (FULL VIP) -->
     <section id="services" class="services section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container" data-aos="fade-up">
 
         <div class="row gy-4">
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <!-- 1. Framing -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item">
               <div class="service-image">
-                <img src="assets/img/health/cardiology-2.webp" alt="Cardiology Services" class="img-fluid">
-                <div class="service-overlay">
-                  <i class="fas fa-heartbeat"></i>
-                </div>
+                <img src="assets/img/health/orthopedics-1.webp" alt="Framing Services" class="img-fluid">
+                <div class="service-overlay"><i class="fas fa-hammer"></i></div>
               </div>
               <div class="service-content">
-                <h3>Cardiology</h3>
-                <p>Comprehensive heart care with advanced diagnostic tools and treatment options for cardiovascular
-                  conditions.</p>
-                <div class="service-features">
-                  <span class="feature-item"><i class="fas fa-check"></i> ECG Testing</span>
-                  <span class="feature-item"><i class="fas fa-check"></i> Heart Surgery</span>
-                </div>
-                <a href="services.html" class="service-btn">
-                  <span>Learn More</span>
-                  <i class="fas fa-arrow-right"></i>
+                <h3>Framing</h3>
+                <p>Precision wood and steel framing for residential and commercial structures with superior structural integrity.</p>
+               
+                <a href="service-details.html?service=framing" class="service-btn">
+                  <span>Learn More</span> <i class="fas fa-arrow-right"></i>
                 </a>
               </div>
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
+          <!-- 2. Insulation -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="150">
             <div class="service-item">
               <div class="service-image">
-                <img src="assets/img/health/neurology-3.webp" alt="Neurology Services" class="img-fluid">
-                <div class="service-overlay">
-                  <i class="fas fa-brain"></i>
-                </div>
+                <img src="assets/img/health/orthopedics-1.webp" alt="Insulation Services" class="img-fluid">
+                <div class="service-overlay"><i class="fas fa-thermometer-half"></i></div>
               </div>
               <div class="service-content">
-                <h3>Neurology</h3>
-                <p>Expert neurological care for brain and nervous system disorders with state-of-the-art imaging
-                  technology.</p>
-                <div class="service-features">
-                  <span class="feature-item"><i class="fas fa-check"></i> MRI Scans</span>
-                  <span class="feature-item"><i class="fas fa-check"></i> Stroke Care</span>
-                </div>
-                <a href="services.html" class="service-btn">
-                  <span>Learn More</span>
-                  <i class="fas fa-arrow-right"></i>
+                <h3>Insulation</h3>
+                <p>High-performance insulation solutions for energy efficiency, soundproofing, and year-round comfort.</p>
+                
+                <a href="service-details.html?service=insulation" class="service-btn">
+                  <span>Learn More</span> <i class="fas fa-arrow-right"></i>
                 </a>
               </div>
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <!-- 3. Drywall -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item">
               <div class="service-image">
-                <img src="assets/img/health/orthopedics-1.webp" alt="Orthopedics Services" class="img-fluid">
-                <div class="service-overlay">
-                  <i class="fas fa-bone"></i>
-                </div>
+                <img src="assets/img/health/orthopedics-1.webp" alt="Drywall Services" class="img-fluid">
+                <div class="service-overlay"><i class="fas fa-th-large"></i></div>
               </div>
               <div class="service-content">
-                <h3>Orthopedics</h3>
-                <p>Specialized bone and joint treatment including sports medicine and reconstructive surgery procedures.
-                </p>
-                <div class="service-features">
-                  <span class="feature-item"><i class="fas fa-check"></i> Joint Replacement</span>
-                  <span class="feature-item"><i class="fas fa-check"></i> Sports Medicine</span>
-                </div>
-                <a href="services.html" class="service-btn">
-                  <span>Learn More</span>
-                  <i class="fas fa-arrow-right"></i>
+                <h3>Drywall</h3>
+                <p>Expert drywall installation for smooth, durable, and perfectly finished interior walls and ceilings.</p>
+                
+                <a href="service-details.html?service=drywall" class="service-btn">
+                  <span>Learn More</span> <i class="fas fa-arrow-right"></i>
                 </a>
               </div>
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="350">
+          <!-- 4. Taping -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="250">
             <div class="service-item">
               <div class="service-image">
-                <img src="assets/img/health/pediatrics-4.webp" alt="Pediatrics Services" class="img-fluid">
-                <div class="service-overlay">
-                  <i class="fas fa-child"></i>
-                </div>
+                <img src="assets/img/health/orthopedics-1.webp" alt="Taping Services" class="img-fluid">
+                <div class="service-overlay"><i class="fas fa-tape"></i></div>
               </div>
               <div class="service-content">
-                <h3>Pediatrics</h3>
-                <p>Dedicated healthcare for children from infancy through adolescence with specialized treatment
-                  protocols.</p>
-                <div class="service-features">
-                  <span class="feature-item"><i class="fas fa-check"></i> Well-Child Visits</span>
-                  <span class="feature-item"><i class="fas fa-check"></i> Immunizations</span>
-                </div>
-                <a href="services.html" class="service-btn">
-                  <span>Learn More</span>
-                  <i class="fas fa-arrow-right"></i>
+                <h3>Taping</h3>
+                <p>Professional taping and joint finishing for seamless drywall surfaces ready for painting.</p>
+               
+                <a href="service-details.html?service=taping" class="service-btn">
+                  <span>Learn More</span> <i class="fas fa-arrow-right"></i>
                 </a>
               </div>
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <!-- 5. Drywall Finisher -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="service-item">
               <div class="service-image">
-                <img src="assets/img/health/emergency-2.webp" alt="Emergency Services" class="img-fluid">
-                <div class="service-overlay">
-                  <i class="fas fa-ambulance"></i>
-                </div>
+                <img src="assets/img/health/orthopedics-1.webp" alt="Drywall Finisher" class="img-fluid">
+                <div class="service-overlay"><i class="fas fa-paint-brush"></i></div>
               </div>
               <div class="service-content">
-                <h3>Emergency Care</h3>
-                <p>24/7 emergency medical services with rapid response teams and critical care capabilities.</p>
-                <div class="service-features">
-                  <span class="feature-item"><i class="fas fa-check"></i> Trauma Center</span>
-                  <span class="feature-item"><i class="fas fa-check"></i> Critical Care</span>
-                </div>
-                <a href="services.html" class="service-btn">
-                  <span>Learn More</span>
-                  <i class="fas fa-arrow-right"></i>
+                <h3>Drywall Finisher</h3>
+                <p>Expert finishing services including sanding, texturing, and preparing walls for final paint application.</p>
+               
+                <a href="service-details.html?service=drywall-finisher" class="service-btn">
+                  <span>Learn More</span> <i class="fas fa-arrow-right"></i>
                 </a>
               </div>
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="450">
+          <!-- 6. Concrete Finishers -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="350">
             <div class="service-item">
               <div class="service-image">
-                <img src="assets/img/health/laboratory-3.webp" alt="Laboratory Services" class="img-fluid">
-                <div class="service-overlay">
-                  <i class="fas fa-microscope"></i>
-                </div>
+                <img src="assets/img/health/orthopedics-1.webp" alt="Concrete Finishers" class="img-fluid">
+                <div class="service-overlay"><i class="fas fa-hard-hat"></i></div>
               </div>
               <div class="service-content">
-                <h3>Laboratory Testing</h3>
-                <p>Advanced diagnostic laboratory services with comprehensive testing panels and rapid result delivery.
-                </p>
-                <div class="service-features">
-                  <span class="feature-item"><i class="fas fa-check"></i> Blood Tests</span>
-                  <span class="feature-item"><i class="fas fa-check"></i> Pathology</span>
-                </div>
-                <a href="services.html" class="service-btn">
-                  <span>Learn More</span>
-                  <i class="fas fa-arrow-right"></i>
+                <h3>Concrete Finishers</h3>
+                <p>Professional concrete finishing for floors, driveways, patios, and decorative concrete surfaces.</p>
+               
+                <a href="service-details.html?service=concrete" class="service-btn">
+                  <span>Learn More</span> <i class="fas fa-arrow-right"></i>
                 </a>
               </div>
             </div>
-          </div><!-- End Service Item -->
+          </div>
+
+          <!-- 7. Mud Tape And Texture -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item">
+              <div class="service-image">
+                <img src="assets/img/health/orthopedics-1.webp" alt="Mud Tape And Texture" class="img-fluid">
+                <div class="service-overlay"><i class="fas fa-brush"></i></div>
+              </div>
+              <div class="service-content">
+                <h3>Mud Tape &amp; Texture</h3>
+                <p>High-quality mudding, taping, and custom texture application for beautiful wall finishes.</p>
+                
+                <a href="service-details.html?service=mud-tape" class="service-btn">
+                  <span>Learn More</span> <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Interior And Exterior Paint -->
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="450">
+            <div class="service-item">
+              <div class="service-image">
+                <img src="assets/img/health/orthopedics-1.webp" alt="Interior And Exterior Paint" class="img-fluid">
+                <div class="service-overlay"><i class="fas fa-paint-roller"></i></div>
+              </div>
+              <div class="service-content">
+                <h3>Interior &amp; Exterior Paint</h3>
+                <p>Premium painting services using high-quality materials for both interior and exterior surfaces.</p>
+               
+                <a href="service-details.html?service=paint" class="service-btn">
+                  <span>Learn More</span> <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
 
         </div>
-
       </div>
+    </section>
 
-    </section><!-- /Services Section -->
+  </main>
 
-  </main>  <footer id="footer" class="hp-footer">
-
+  <!-- FOOTER (UNCHANGED) -->
+  <footer id="footer" class="hp-footer">
+    <!-- ... same footer as before ... -->
     <div class="hp-footer__wave">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
         <path d="M0,64 C300,120 900,0 1200,64 L1200,120 L0,120 Z" fill="#ffffff"></path>
       </svg>
     </div>
-
     <div class="hp-footer__cta">
       <div class="container">
         <div class="hp-footer__cta-box" data-aos="fade-up">
@@ -293,7 +425,6 @@
         </div>
       </div>
     </div>
-
     <div class="hp-footer__contact-row">
       <div class="container">
         <div class="row g-3">
@@ -327,18 +458,15 @@
         </div>
       </div>
     </div>
-
     <div class="hp-footer__main">
       <div class="container">
         <div class="row g-5 align-items-start">
-
           <div class="col-lg-4 col-md-6">
             <a href="index.html">
               <img src="assets/img/logoremove.png" alt="Harnoor Pallak Construction" class="hp-footer__brand-logo">
             </a>
             <p class="hp-footer__brand-text">Building exceptional structures through quality craftsmanship, innovative solutions, and reliable service that exceeds client expectations.</p>
           </div>
-
           <div class="col-lg-2 col-md-6 col-6">
             <h6 class="hp-footer__heading">Quick Links</h6>
             <ul class="hp-footer__links">
@@ -350,7 +478,6 @@
               <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact Us</a></li>
             </ul>
           </div>
-
           <div class="col-lg-2 col-md-6 col-6">
             <h6 class="hp-footer__heading">Our Services</h6>
             <ul class="hp-footer__links">
@@ -362,7 +489,6 @@
               <li><a href="services.html"><i class="bi bi-chevron-right"></i> Electrical &amp; Plumbing</a></li>
             </ul>
           </div>
-
           <div class="col-lg-4 col-md-6">
             <h6 class="hp-footer__heading">Stay Updated</h6>
             <p class="hp-footer__newsletter-text">Subscribe for project showcases, construction tips, and exclusive updates from Harnoor Pallak Construction.</p>
@@ -384,11 +510,9 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
-
     <div class="hp-footer__bottom">
       <div class="container">
         <div class="row align-items-center g-3">
@@ -405,14 +529,10 @@
         </div>
       </div>
     </div>
-
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#!" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
+  <a href="#!" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
@@ -422,10 +542,7 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>
